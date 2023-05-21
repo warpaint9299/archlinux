@@ -97,9 +97,9 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+# bindsym $mod+s layout stacking
+# bindsym $mod+w layout tabbed
+# bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -206,15 +206,18 @@ bar {
         tray_padding 4
 }
 
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 1
 hide_edge_borders none
 exec_always --no-startup-id feh --bg-fill ~/pictures/wallpaper01.jpg
 exec_always --no-startup-id picom
 exec --no-startup-id fcitx5
 exec --no-startup-id alacritty
 exec --no-startup-id greenclip daemon > /dev/null
-gaps inner 5
+gaps inner 10
 gaps outer 5
-bindsym $mod+p exec "killall -q flameshot; flameshot gui"
+smart_gaps off
+smart_borders on
+bindsym $mod+c exec rofi -modi "clipboard:greenclip print" -show clipboard
+bindsym $mod+e exec thunar
+bindsym $mod+s exec "killall -q flameshot; flameshot gui"
 bindsym $mod+space exec "rofi -show drun"
-bindsym $mod+c exec --no-startup-id rofi -modi "clipboard:greenclip print" -show clipboard

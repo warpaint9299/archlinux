@@ -21,7 +21,7 @@ font:
   italic:
     family: FantasqueSansMono Nerd Font Mono
     style: italic
-  size: 16
+  size: 18
 
 selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>\t@="

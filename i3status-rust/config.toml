@@ -87,6 +87,6 @@ net_down = ""
 button = "left"
 cmd = "alacritty -e nmtui-connect"
 
-[[block]]
-block = "external_ip"
-format = " $ip $country_code "
+#[[block]]
+#block = "external_ip"
+#format = " $ip $country_code "
