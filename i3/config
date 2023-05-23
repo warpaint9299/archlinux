@@ -207,8 +207,8 @@ bar {
 
 for_window [class="^.*"] border pixel 0
 hide_edge_borders none
-exec_always --no-startup-id feh --bg-fill ~/pictures/wallpaper01.jpg
-exec_always --no-startup-id picom --config ~/.config/picom/picom.conf
+exec_always --no-startup-id feh --bg-fill ${HOME}/pictures/wallpaper01.jpg
+exec_always --no-startup-id picom --config ${HOME}/.config/picom/picom.conf
 exec --no-startup-id fcitx5
 exec --no-startup-id blueman-applet
 exec --no-startup-id alacritty
@@ -218,4 +218,4 @@ gaps outer 10
 bindsym $mod+p exec rofi -modi "clipboard:greenclip print" -show clipboard
 bindsym $mod+x exec thunar
 bindsym $mod+s exec "killall -q flameshot; flameshot gui"
-bindsym $mod+space exec ~/.config/rofi/launcher.sh
+bindsym $mod+space exec ${HOME}/.config/rofi/launcher.sh
