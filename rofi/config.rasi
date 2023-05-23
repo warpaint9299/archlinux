@@ -1,0 +1,5 @@
+configuration {
+  modes: [ drun, run, window, combi ];
+}
+
+@theme "gruvbox-light"

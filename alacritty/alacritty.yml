@@ -1,8 +1,11 @@
 window:
   # background opacity
-  opacity: 0.8
+  # opacity: 0.8
   dynamic_title: true
-  resize_increments: true
+  resize_increments: false
+  padding:
+    x: 15
+    y: 0
 
 env:
   TERM: xterm-256color
@@ -42,10 +45,10 @@ selection:
 # - Paste
 # - PasteSelection
 # - Copy (TODO)
-mouse_bindings:
-  - { mouse: 4, mods: Control, action: IncreaseFontSize }
-  - { mouse: 5, mods: Control, action: DecreaseFontSize }
-  - { mouse: Right, action: Paste }
+#mouse_bindings:
+#  - { mouse: 4, mods: Control, action: IncreaseFontSize }
+#  - { mouse: 5, mods: Control, action: DecreaseFontSize }
+#  - { mouse: Right, action: Paste }
 
 cursor:
   # Cursor style

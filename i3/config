@@ -32,8 +32,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
-# exec --no-startup-id nm-applet
-exec --no-startup-id blueman-applet
+exec --no-startup-id nm-applet
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -206,18 +205,17 @@ bar {
         tray_padding 4
 }
 
-for_window [class="^.*"] border pixel 1
+for_window [class="^.*"] border pixel 0
 hide_edge_borders none
 exec_always --no-startup-id feh --bg-fill ~/pictures/wallpaper01.jpg
-exec_always --no-startup-id picom
+exec_always --no-startup-id picom --config ~/.config/picom/picom.conf
 exec --no-startup-id fcitx5
+exec --no-startup-id blueman-applet
 exec --no-startup-id alacritty
 exec --no-startup-id greenclip daemon > /dev/null
 gaps inner 10
-gaps outer 5
-smart_gaps off
-smart_borders on
-bindsym $mod+c exec rofi -modi "clipboard:greenclip print" -show clipboard
-bindsym $mod+e exec thunar
+gaps outer 10
+bindsym $mod+p exec rofi -modi "clipboard:greenclip print" -show clipboard
+bindsym $mod+x exec thunar
 bindsym $mod+s exec "killall -q flameshot; flameshot gui"
-bindsym $mod+space exec "rofi -show drun"
+bindsym $mod+space exec ~/.config/rofi/launcher.sh
