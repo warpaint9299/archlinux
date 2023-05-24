@@ -96,8 +96,8 @@ volume_muted = "󰸈"
 volume = "󰕾"
 headphones = "󰋋"
 
-[[block]]
-block = "battery"
-format = " 󱈏 $percentage "
-device = "DisplayDevice"
-driver = "upower"
+#[[block]]
+#block = "battery"
+#format = " 󱈏 $percentage"
+#device = "DisplayDevice"
+#driver = "upower"
