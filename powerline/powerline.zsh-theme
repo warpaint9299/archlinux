@@ -41,7 +41,7 @@ if [ "$POWERLINE_PATH" = "full" ]; then
 elif [ "$POWERLINE_PATH" = "short" ]; then
   POWERLINE_PATH="%~"
 else
-  POWERLINE_PATH="%d"
+  POWERLINE_PATH="%1d"
 fi
 
 if [ "$POWERLINE_CUSTOM_CURRENT_PATH" != "" ]; then
@@ -147,8 +147,8 @@ else
     VENV_STATUS=""
 fi
 
-PROMPT="$POWERLINE_SEC1_BG$POWERLINE_SEC1_TXT $POWERLINE_USER_NAME $VENV_STATUS%k%f$POWERLINE_SEC1_FG%K{blue}"$'\ue0b0'"%k%f%F{white}%K{blue} "$POWERLINE_PATH"%F{blue}"" %k"$'\ue0b0'"%f ""
-"
+PROMPT="$POWERLINE_SEC1_BG$POWERLINE_SEC1_TXT  $POWERLINE_USER_NAME $VENV_STATUS%k%f$POWERLINE_SEC1_FG%K{blue}"$'\ue0b0'"%k%f%F{black}%K{blue}   "$POWERLINE_PATH"%F{blue}"" %k%K{yellow}"$'\ue0b0'"%f%F{black}%K{yellow}   $POWERLINE_DATE_FORMAT 󱑏   $POWERLINE_RIGHT_B "%k"
+"%F{black}%K{yellow}" ^o^%k%f%F{yellow}"$'\ue0b0'"%k "
 
 if [ "$POWERLINE_NO_BLANK_LINE" = "" ]; then
     PROMPT="
