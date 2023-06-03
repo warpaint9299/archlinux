@@ -1,0 +1,34 @@
+{
+  "languageserver": {
+    "bash": {
+      "command": "bash-language-server",
+      "args": [
+        "start"
+      ],
+      "filetypes": [
+        "sh"
+      ]
+    },
+    "lua": {
+      "command": "lua-language-server",
+      "filetypes": [
+        "lua"
+      ]
+    },
+    "clang": {
+      "command": "clangd",
+      "filetypes": [
+        "c",
+        "cpp"
+      ]
+    },
+    "rust": {
+      "command": "rust-analyzer",
+      "filetypes": [
+        "rust"
+      ]
+    }
+  },
+  "rust-analyzer.server.path": "/usr/bin/rust-analyzer",
+  "yaml.format.enable": true
+}

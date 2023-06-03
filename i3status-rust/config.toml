@@ -31,13 +31,13 @@ block = "cpu"
 [block.icons_overrides]
 cpu = "󰻠"
 
-[[block]]
-block = "amd_gpu"
-format = " $icon $utilization "
-format_alt = " $icon MEM: $vram_used_percents ($vram_used/$vram_total) "
-interval = 1
-[block.icons_overrides]
-gpu = " "
+#[[block]]
+#block = "amd_gpu"
+#format = " $icon $utilization "
+#format_alt = " $icon MEM: $vram_used_percents ($vram_used/$vram_total) "
+#interval = 1
+#[block.icons_overrides]
+#gpu = " "
 
 #[[block]]
 #block = "memory"

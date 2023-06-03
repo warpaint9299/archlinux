@@ -1,0 +1,121 @@
+
+call plug#begin()
+Plug 'ryanoasis/vim-devicons'
+Plug 'preservim/nerdtree'
+Plug 'morhetz/gruvbox'
+Plug 'ap/vim-css-color'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'plasticboy/vim-markdown'
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+call plug#end()
+
+set clipboard+=unnamedplus
+let g:vimspector_enable_mappings = 'HUMAN'
+let g:mapleader = '`'
+colorscheme gruvbox
+set mouse=a
+set number relativenumber
+set hlsearch
+set showcmd
+set virtualedit=
+set linebreak
+set guioptions+=b
+set fileformats=unix,dos,mac
+set textwidth=80
+set helplang=cn
+set ambiwidth=double
+set showmatch
+set background=dark
+set autoindent
+set ruler
+set incsearch
+set backspace=2
+set ignorecase
+set hlsearch
+set laststatus=2
+set noswapfile
+set cursorline
+set autowrite
+set nrformats= "把所有的数字当理解成十进制 00 or 0x
+set ts=4 sw=4 expandtab
+set display=truncate "如果末行被截短，显示 @@@ 而不是隐藏整行
+set nrformats-=octal
+set encoding=utf-8
+set fileencodings=ucs-bom,utf-8,gb18030,cp936,latin1
+set history=10000
+set splitright
+set splitbelow
+
+
+filetype on
+syntax enable
+au bufreadpost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+
+"
+
+" :map 递归映射
+" :noremap 非递归映射
+" :nnoremap 正常模式映
+" :vnoremap 可视模式和选择模式映射
+" :xnoremap 可视模式映射
+" :snoremap 选择模式映
+" :onoremap 操作待决模式映射
+" :noremap! 插入和命令模式映射
+" :inoremap 插入模式映射
+" :cnoremap 命令模式映射
+
+"
+"noremap
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
+inoremap jk <esc>
+
+
+" Use tab for trigger completion with characters ahead and navigate
+" NOTE: There's anways complete item selected by default, you may want to enable
+" no select by `"suggest.noselect": true` in your configuration file
+" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
+" other plugin before putting this into your config
+inoremap <silent><expr> <TAB>
+      \ coc#pum#visible() ? coc#pum#next(1) :
+      \ CheckBackspace() ? "\<Tab>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
+
+" Make <CR> to accept selected completion item or notify coc.nvim to format
+" <C-g>u breaks current undo, please make your own choice
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
+" Use `[g` and `]g` to navigate diagnostics
+" Use `:CocDiagnostics` to get all diagnostics of current buffer in location list
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
+
+" GoTo code navigation
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'default'
+
+nmap <leader>1 :tabn 1 <CR>
+nmap <leader>2 :tabn 2 <CR>
+nmap <leader>3 :tabn 3 <CR>
+nmap <leader>4 :tabn 4 <CR>
+nmap <leader>5 :tabn 5 <CR>
+nmap <leader>6 :tabn 6 <CR>
+nmap <leader>7 :tabn 7 <CR>
+nmap <leader>8 :tabn 8 <CR>
+nmap <leader>9 :tabn 9 <CR>
+nmap <leader>0 :tabn 0 <CR>
+nmap <leader>p :tabprevious <CR>
+nmap <leader>n :tabnext <CR>

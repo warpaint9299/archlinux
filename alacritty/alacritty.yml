@@ -51,7 +51,7 @@ selection:
 # - PasteSelection
 # - Copy (TODO)
 mouse_bindings:
-  - { mouse: Right, action: Paste }
+  - { mouse: Right, mods: Control, action: Paste }
   - { mouse: 4, mods: Control, action: IncreaseFontSize }
   - { mouse: 5, mods: Control, action: DecreaseFontSize }
 
