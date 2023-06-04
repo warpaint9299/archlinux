@@ -27,6 +27,15 @@
       "filetypes": [
         "rust"
       ]
+    },
+    "efm": {
+      "command": "efm-langserver",
+      "args": [],
+      "filetypes": [
+        "vim",
+        "eruby",
+        "markdown"
+      ]
     }
   },
   "rust-analyzer.server.path": "/usr/bin/rust-analyzer",

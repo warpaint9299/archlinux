@@ -16,8 +16,9 @@ set clipboard+=unnamedplus
 let g:vimspector_enable_mappings = 'HUMAN'
 let g:mapleader = '`'
 colorscheme gruvbox
-set mouse=a
-set number relativenumber
+"!-~,^*,^|,^",192-255
+set iskeyword=a-z
+set relativenumber
 set hlsearch
 set showcmd
 set virtualedit=
@@ -104,18 +105,80 @@ nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
 
+let g:airline#extensions#default#layout = [
+  \ [ 'a', 'b', 'c' ],
+  \ [ 'x', 'y', 'z' ]
+  \ ]
+
+let g:airline#extensions#default#section_truncate_width = {
+      \ 'b': 79,
+      \ 'x': 60,
+      \ 'y': 80,
+      \ 'z': 45,
+      \ }
+
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'default'
+let g:airline#extensions#nerdtree_statusline = 1
+let g:airline_stl_path_style = 'short'
+let g:airline_section_a = airline#section#create(['mode'])
+let g:airline_section_b = ''
+let g:airline_section_c = airline#section#create(['file'])
+let g:airline_section_x = airline#section#create(['crypt','readonly','path','linenr','maxlinenr'])
+let g:airline_section_y = airline#section#create(['filetype'])
+let g:airline_section_z = airline#section#create(['ffenc'])
+let g:airline_section_error = ''
+let g:airline_section_warning = ''
 
-nmap <leader>1 :tabn 1 <CR>
-nmap <leader>2 :tabn 2 <CR>
-nmap <leader>3 :tabn 3 <CR>
-nmap <leader>4 :tabn 4 <CR>
-nmap <leader>5 :tabn 5 <CR>
-nmap <leader>6 :tabn 6 <CR>
-nmap <leader>7 :tabn 7 <CR>
-nmap <leader>8 :tabn 8 <CR>
-nmap <leader>9 :tabn 9 <CR>
-nmap <leader>0 :tabn 0 <CR>
-nmap <leader>p :tabprevious <CR>
-nmap <leader>n :tabnext <CR>
+
+let g:airline#extensions#branch#enabled = 1
+let g:airline#extensions#battery#enabled = 1
+let g:battery#graph_indicators = [
+	      \ '',
+	      \ '',
+	      \ '',
+	      \ '',
+	      \ '',
+	      \]
+
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline_symbols.branch = ''
+let g:airline_symbols.colnr = ' ℅:'
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.linenr = ' :'
+let g:airline_symbols.maxlinenr = '☰ '
+let g:airline_symbols.dirty='⚡'
+
+let g:airline#extensions#tabline#buffer_idx_format = {
+    \ '0': '0',
+    \ '1': '1',
+    \ '2': '2',
+    \ '3': '3',
+    \ '4': '4',
+    \ '5': '5',
+    \ '6': '6',
+    \ '7': '7',
+    \ '8': '8',
+    \ '9': '9'
+    \}
+
+let g:airline#extensions#tabline#buffer_idx_mode = 1
+nmap <leader>1 <Plug>AirlineSelectTab1
+nmap <leader>2 <Plug>AirlineSelectTab2
+nmap <leader>3 <Plug>AirlineSelectTab3
+nmap <leader>4 <Plug>AirlineSelectTab4
+nmap <leader>5 <Plug>AirlineSelectTab5
+nmap <leader>6 <Plug>AirlineSelectTab6
+nmap <leader>7 <Plug>AirlineSelectTab7
+nmap <leader>8 <Plug>AirlineSelectTab8
+nmap <leader>9 <Plug>AirlineSelectTab9
+nmap <leader>0 <Plug>AirlineSelectTab0
+nmap <leader>- <Plug>AirlineSelectPrevTab
+nmap <leader>+ <Plug>AirlineSelectNextTab
