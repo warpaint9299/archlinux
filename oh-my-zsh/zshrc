@@ -106,9 +106,9 @@ export LANG=en_US.UTF-8
 #
 alias zshconfig="mate ~/.zshrc"
 alias ohmyzsh="mate ~/.oh-my-zsh"
-#alias vim='nvim'
-alias vi='nvim'
-setxkbmap -option ctrl:nocaps
+alias vim='vim'
+alias vi='vim'
+alias nano='vim'
 export DOCKER_HOST=unix:///run/user/1000/docker.sock
 
 ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
@@ -116,6 +116,7 @@ if [[ ! -d $ZSH_CACHE_DIR ]]; then
   mkdir $ZSH_CACHE_DIR
 fi
 
+setxkbmap -option ctrl:nocaps
 #POWERLINE_NO_BLANK_LINE="true"
 POWERLINE_DISABLE_RPROMPT="true"
 source $ZSH/oh-my-zsh.sh
