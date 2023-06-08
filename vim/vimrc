@@ -83,6 +83,12 @@ inoremap <left> <nop>
 inoremap <right> <nop>
 inoremap jk <esc>
 
+nmap tt :NERDTreeToggle<CR>
+let NERDTreeWinSize=32
+let NERDTreeWinPos="right"
+let NERDTreeShowHidden=0
+let NERDTreeMinimalUI=1
+let NERDTreeAutoDeleteBuffer=1
 
 " Use tab for trigger completion with characters ahead and navigate
 " NOTE: There's anways complete item selected by default, you may want to enable
