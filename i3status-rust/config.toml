@@ -26,10 +26,10 @@ interval = 1
 [block.format]
 full = "󱑎  $timestamp.datetime(f:'%Y-%m-%d %R') "
 
-[[block]]
-block = "cpu"
-[block.icons_overrides]
-cpu = "󰻠"
+#[[block]]
+#block = "cpu"
+#[block.icons_overrides]
+#cpu = "󰻠"
 
 #[[block]]
 #block = "amd_gpu"
