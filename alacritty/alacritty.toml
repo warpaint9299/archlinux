@@ -16,9 +16,9 @@ startup_mode = "Fullscreen"
 history = 10000
 
 [font]
-normal = { family = "FantasqueSansMono Nerd Font", style = "Regular" }
-bold = { family = "FantasqueSansMono Nerd Font", style = "Bold" }
-italic = { family = "FantasqueSansMono Nerd Font", style = "Italic" }
+normal = { family = "VictorMono Nerd Font", style = "Regular" }
+bold = { family = "VictorMono Nerd Font", style = "Bold" }
+italic = { family = "VictorMono Nerd Font", style = "Italic" }
 size = 18
 
 [selection]
