@@ -150,7 +150,7 @@ fi
 # PROMPT="$POWERLINE_SEC1_BG$POWERLINE_SEC1_TXT  $POWERLINE_USER_NAME $VENV_STATUS%k%f$POWERLINE_SEC1_FG%K{blue}"$'\ue0b0'"%k%f%F{black}%K{blue}   "$POWERLINE_PATH"%F{blue}"" %k%K{yellow}"$'\ue0b0'"%f%F{black}%K{yellow}   $POWERLINE_DATE_FORMAT 󱑏  $POWERLINE_RIGHT_B "%k"
 
 PROMPT="$POWERLINE_SEC1_BG$POWERLINE_SEC1_TXT  $POWERLINE_USER_NAME $VENV_STATUS%k%f$POWERLINE_SEC1_FG%K{blue}"$'\ue0b0'"%k%f%F{black}%K{blue}   "$POWERLINE_PATH" "%k"
-"%F{black}%K{yellow}" ^o^%k%f%F{yellow}"$'\ue0b0'"%k "
+"%F{black}%K{yellow}"  ^o^%k%f%F{yellow}"$'\ue0b0'"%k "
 
 if [ "$POWERLINE_NO_BLANK_LINE" = "" ]; then
     PROMPT="

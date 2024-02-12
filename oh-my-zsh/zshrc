@@ -95,7 +95,7 @@ export LANG=en_US.UTF-8
 # fi
 
 # Compilation flags
-# export ARCHFLAGS="-arch x86_64"
+export ARCHFLAGS="-arch x86_64"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -106,9 +106,9 @@ export LANG=en_US.UTF-8
 #
 alias zshconfig="mate ~/.zshrc"
 alias ohmyzsh="mate ~/.oh-my-zsh"
-alias vim='vim'
-alias vi='vim'
-alias nano='vim'
+alias vim='nvim'
+alias vi='nvim'
+alias nano='nvim'
 export DOCKER_HOST=unix:///run/user/1000/docker.sock
 
 ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
