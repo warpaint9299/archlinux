@@ -41,7 +41,7 @@ if [ "$POWERLINE_PATH" = "full" ]; then
 elif [ "$POWERLINE_PATH" = "short" ]; then
   POWERLINE_PATH="%~"
 else
-  POWERLINE_PATH="%1d"
+  POWERLINE_PATH="%d"
 fi
 
 if [ "$POWERLINE_CUSTOM_CURRENT_PATH" != "" ]; then
@@ -57,27 +57,27 @@ if [ "$POWERLINE_GIT_DIRTY" = "" ]; then
 fi
 
 if [ "$POWERLINE_GIT_ADDED" = "" ]; then
-  POWERLINE_GIT_ADDED="%F{green}✚%F{black}"
+  POWERLINE_GIT_ADDED="%F{green}✚ %F{black}"
 fi
 
 if [ "$POWERLINE_GIT_MODIFIED" = "" ]; then
-  POWERLINE_GIT_MODIFIED="%F{blue}✹%F{black}"
+  POWERLINE_GIT_MODIFIED="%F{blue}✹ %F{black}"
 fi
 
 if [ "$POWERLINE_GIT_DELETED" = "" ]; then
-  POWERLINE_GIT_DELETED="%F{red}✖%F{black}"
+  POWERLINE_GIT_DELETED="%F{red}✖ %F{black}"
 fi
 
 if [ "$POWERLINE_GIT_UNTRACKED" = "" ]; then
-  POWERLINE_GIT_UNTRACKED="%F{yellow}✭%F{black}"
+  POWERLINE_GIT_UNTRACKED="%F{yellow}✭ %F{black}"
 fi
 
 if [ "$POWERLINE_GIT_RENAMED" = "" ]; then
-  POWERLINE_GIT_RENAMED="➜"
+  POWERLINE_GIT_RENAMED="➜ "
 fi
 
 if [ "$POWERLINE_GIT_UNMERGED" = "" ]; then
-  POWERLINE_GIT_UNMERGED="═"
+  POWERLINE_GIT_UNMERGED="═ "
 fi
 
 if [ "$POWERLINE_RIGHT_A_COLOR_FRONT" = "" ]; then
@@ -99,9 +99,9 @@ ZSH_THEME_GIT_PROMPT_DELETED=" $POWERLINE_GIT_DELETED"
 ZSH_THEME_GIT_PROMPT_UNTRACKED=" $POWERLINE_GIT_UNTRACKED"
 ZSH_THEME_GIT_PROMPT_RENAMED=" $POWERLINE_GIT_RENAMED"
 ZSH_THEME_GIT_PROMPT_UNMERGED=" $POWERLINE_GIT_UNMERGED"
-ZSH_THEME_GIT_PROMPT_AHEAD=" ⬆"
-ZSH_THEME_GIT_PROMPT_BEHIND=" ⬇"
-ZSH_THEME_GIT_PROMPT_DIVERGED=" ⬍"
+ZSH_THEME_GIT_PROMPT_AHEAD=" ⬆ "
+ZSH_THEME_GIT_PROMPT_BEHIND=" ⬇ "
+ZSH_THEME_GIT_PROMPT_DIVERGED=" ⬍ "
 
 # if [ "$(git_prompt_info)" = "" ]; then
    # POWERLINE_GIT_INFO_LEFT=""
@@ -109,9 +109,9 @@ ZSH_THEME_GIT_PROMPT_DIVERGED=" ⬍"
 # else
     if [ "$POWERLINE_SHOW_GIT_ON_RIGHT" = "" ]; then
         if [ "$POWERLINE_HIDE_GIT_PROMPT_STATUS" = "" ]; then
-            POWERLINE_GIT_INFO_LEFT=" %F{blue}%K{white}"$'\ue0b0'"%F{white}%F{black}%K{white}"$'$(git_prompt_info)$(git_prompt_status)%F{white}'
+            POWERLINE_GIT_INFO_LEFT="%F{blue}%K{white}""%F{white}%F{black}%K{white}"$'$(git_prompt_info)$(git_prompt_status)%k%f%F{white}$'\ue0b0'%F{white}'
         else
-            POWERLINE_GIT_INFO_LEFT=" %F{blue}%K{white}"$'\ue0b0'"%F{white}%F{black}%K{white}"$'$(git_prompt_info)%F{white}'
+            POWERLINE_GIT_INFO_LEFT=" %F{blue}%K{white}""%F{white}%F{black}%K{white}"$'$(git_prompt_info)%F{white}'
         fi
         POWERLINE_GIT_INFO_RIGHT=""
     else
@@ -147,10 +147,9 @@ else
     VENV_STATUS=""
 fi
 
-# PROMPT="$POWERLINE_SEC1_BG$POWERLINE_SEC1_TXT  $POWERLINE_USER_NAME $VENV_STATUS%k%f$POWERLINE_SEC1_FG%K{blue}"$'\ue0b0'"%k%f%F{black}%K{blue}   "$POWERLINE_PATH"%F{blue}"" %k%K{yellow}"$'\ue0b0'"%f%F{black}%K{yellow}   $POWERLINE_DATE_FORMAT 󱑏  $POWERLINE_RIGHT_B "%k"
+PROMPT="$POWERLINE_SEC1_BG$POWERLINE_SEC1_TXT  $POWERLINE_USER_NAME $VENV_STATUS%k%f$POWERLINE_SEC1_FG%K{blue}"$'\ue0b0'"%k%f%F{black}%K{blue}   "$POWERLINE_PATH" %k%f%F{blue}%K{white}"$'\ue0b0'""$POWERLINE_GIT_INFO_LEFT""$'\ue0b0'"
+"%F{black}%K{yellow}" ^o^%k%f%F{yellow}"$'\ue0b0'"%f%k"" "
 
-PROMPT="$POWERLINE_SEC1_BG$POWERLINE_SEC1_TXT  $POWERLINE_USER_NAME $VENV_STATUS%k%f$POWERLINE_SEC1_FG%K{blue}"$'\ue0b0'"%k%f%F{black}%K{blue}   "$POWERLINE_PATH" "%k"
-"%F{black}%K{yellow}" ^o^%k%f%F{yellow}"$'\ue0b0'"%k"" "
 
 if [ "$POWERLINE_NO_BLANK_LINE" = "" ]; then
     PROMPT="

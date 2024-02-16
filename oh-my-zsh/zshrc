@@ -117,7 +117,5 @@ if [[ ! -d $ZSH_CACHE_DIR ]]; then
 fi
 
 setxkbmap -option ctrl:nocaps
-#POWERLINE_SHOW_GIT_ON_RIGHT=""
-#POWERLINE_NO_BLANK_LINE="true"
-POWERLINE_DISABLE_RPROMPT="false"
+POWERLINE_PATH="short"
 source $ZSH/oh-my-zsh.sh
