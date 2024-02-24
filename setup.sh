@@ -118,6 +118,10 @@ cat << EOF >> /etc/hosts
 127.0.0.1   localhost
 ::1         localhost
 127.0.1.1   arch
+185.199.108.133   raw.githubusercontent.com
+185.199.109.133   raw.githubusercontent.com
+185.199.110.133   raw.githubusercontent.com
+185.199.111.133   raw.githubusercontent.com
 EOF
 
 cat << EOF >> /etc/resolv.conf
@@ -149,18 +153,47 @@ yay -S xorg xorg-xinit \
 	alacritty firefox-esr google-chrome \
 	fcitx5-im fcitx5-chinese-addons fcitx5-material-color \
 	sof-firmware alsa-firmware alsa-ucm-conf \
-	ntfs-3g \
+	mesa lib32-mesa xf86-video-amdgpu vulkan-radeon lib32-vulkan-radeon libva-mesa-driver lib32-libva-mesa-driver mesa-vdpau lib32-mesa-vdpau \
+	zsh-syntax-highlighting zsh-autosuggestions \
+	ntfs-3g hplip cups \
 	bluez bluez-utils bluez-obex \
 	ranger feh blueman networkmanager network-manager-applet \
-	w3m ueberzug evince-no-gnome yesplaymusic\
+	make \
+	w3m ueberzug evince-no-gnome yesplaymusic \
 	noto-fonts-cjk noto-fonts-emoji noto-fonts-extra \
 	nerd-fonts-dejavu-sans-mono nerd-fonts-victor-mono \
 	unzip rar flameshot obs-studio \
+	pavucontrol \
 	xfce4-panel xfce4-power-manager xfce4-pulseaudio-plugin \
 	virtualbox6.1-bin virtualbox6.1-bin-guest-iso virtualbox6.1-ext-oracle &
 
 systemctl enable dhcpcd
 systemctl enable NetworkManager
+systemctl enable bluetooth
+systemctl enable cups
+
+# su warpaint
+# cd ~
+# sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" && \
+# 
+# mkdir -p ~/.local
+# cd ~/.local
+# 
+# git clone https://github.com/warpaint9299/archlinux.git && \
+# ln -sf ~/.local/archlinux/alacritty ~/.conf/alacritty
+# ln -sf ~/.local/archlinux/picom ~/.conf/picom
+# ln -sf ~/.local/archlinux/powerline/powerline.zsh-theme ~/.oh-my-zsh/themes/powerline.zsh-theme
+# ln -sf ~/.local/archlinux/oh-my-zsh/zshrc ~/.zshrc
+# 
+# git clone https://github.com/warpaint9299/nvim-0.9 && \
+# ln -sf ~/.local/nvim-0.9 ~/.config/nvim
+# 
+# git clone https://github.com/warpaint9299/dwm-6.4 && \
+# ln -sf ~/.local/dwm-6.4 ~/.dwm
+# ln -sf ~/.local/dwm-6.4/.xinitrc ~/.xinitrc
+# 
+# git clone https://github.com/warpaint9299/wallpaper && \
+# ln -sf ~/.local/wallpaper ~/.wallpaper
 
 # exit
 # umount -R /mnt
