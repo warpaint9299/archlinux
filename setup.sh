@@ -147,6 +147,7 @@ pacman -S archlinuxcn-keyring
 pacman -S yay git
 
 yay -S xorg xorg-xinit \
+	xclip xautolock i3lock \
 	alacritty firefox-esr google-chrome \
 	fcitx5-im fcitx5-chinese-addons fcitx5-material-color \
 	alsa-utils pavucontrol apulse sof-firmware alsa-firmware alsa-ucm-conf \
