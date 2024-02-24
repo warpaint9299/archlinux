@@ -56,7 +56,6 @@ pacman-key --populate archlinux
 # mount /dev/nvme0n1p1 /mnt/boot/efi
 # lsblk
 
-
 pacstrap /mnt base base-devel linux linux-headers linux-firmware \
 	sudo dhcpcd iwd neovim zsh \
 	lvm2 amd-ucode grub efibootmgr
@@ -67,7 +66,6 @@ arch-chroot /mnt
 
 # /etc/mkinitcpio.conf
 # HOOKS=( ... block encrypt lvm2 filesystems ...)
-#
 
 grub-install --efi-directory=/boot/efi
 
@@ -88,7 +86,6 @@ grub-install --efi-directory=/boot/efi
 
 # /etc/mkinitcpio.conf
 # FILES=( /secure/root_keyfile.bin )
-#
 
 # /etc/crypttab
 ## UUID:
@@ -144,7 +141,7 @@ EOF
 chattr +i /etc/resolv.conf
 hwclock --systohc
 
-pacman-key --lsign-key "farseerfc@archlinux.org" && \
+pacman-key --lsign-key "farseerfc@archlinux.org"
 pacman -S archlinuxcn-keyring
 
 pacman -S yay git
@@ -152,18 +149,17 @@ pacman -S yay git
 yay -S xorg xorg-xinit \
 	alacritty firefox-esr google-chrome \
 	fcitx5-im fcitx5-chinese-addons fcitx5-material-color \
-	sof-firmware alsa-firmware alsa-ucm-conf \
+	alsa-utils pavucontrol apulse sof-firmware alsa-firmware alsa-ucm-conf \
 	mesa lib32-mesa xf86-video-amdgpu vulkan-radeon lib32-vulkan-radeon libva-mesa-driver lib32-libva-mesa-driver mesa-vdpau lib32-mesa-vdpau \
 	zsh-syntax-highlighting zsh-autosuggestions \
 	ntfs-3g hplip cups \
 	bluez bluez-utils bluez-obex \
 	ranger feh blueman networkmanager network-manager-applet \
-	make \
+	jre11-openjdk jre11-openjdk-headless make cmake \
 	w3m ueberzug evince-no-gnome yesplaymusic \
 	noto-fonts-cjk noto-fonts-emoji noto-fonts-extra \
 	nerd-fonts-dejavu-sans-mono nerd-fonts-victor-mono \
 	unzip rar flameshot obs-studio \
-	pavucontrol \
 	xfce4-panel xfce4-power-manager xfce4-pulseaudio-plugin \
 	virtualbox6.1-bin virtualbox6.1-bin-guest-iso virtualbox6.1-ext-oracle &
 
