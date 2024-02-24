@@ -154,7 +154,7 @@ yay -S xorg xorg-xinit \
 	zsh-syntax-highlighting zsh-autosuggestions \
 	ntfs-3g hplip cups \
 	bluez bluez-utils bluez-obex \
-	ranger feh blueman networkmanager network-manager-applet \
+	ranger feh rofi blueman networkmanager network-manager-applet \
 	jre11-openjdk jre11-openjdk-headless make cmake \
 	w3m ueberzug evince-no-gnome yesplaymusic \
 	noto-fonts-cjk noto-fonts-emoji noto-fonts-extra \
