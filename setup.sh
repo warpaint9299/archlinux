@@ -147,7 +147,7 @@ pacman -S archlinuxcn-keyring
 pacman -S yay git
 
 yay -S xorg xorg-xinit \
-	xclip xautolock i3lock \
+	xdg-user-dirs xclip xautolock i3lock \
 	alacritty firefox-esr google-chrome \
 	fcitx5-im fcitx5-chinese-addons fcitx5-material-color \
 	alsa-utils pavucontrol apulse sof-firmware alsa-firmware alsa-ucm-conf \
@@ -155,13 +155,13 @@ yay -S xorg xorg-xinit \
 	zsh-syntax-highlighting zsh-autosuggestions \
 	ntfs-3g hplip cups \
 	bluez bluez-utils bluez-obex \
-	ranger feh rofi blueman networkmanager network-manager-applet \
+	screenkey fzf ranger feh rofi blueman networkmanager network-manager-applet \
 	jre11-openjdk jre11-openjdk-headless make cmake \
 	w3m ueberzug evince-no-gnome yesplaymusic \
-	noto-fonts-cjk noto-fonts-emoji noto-fonts-extra \
-	nerd-fonts-dejavu-sans-mono nerd-fonts-victor-mono \
+	powerline-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra \
+	ttf-nerd-fonts-symbols  ttf-victor-mono-nerd \
 	unzip rar flameshot obs-studio \
-	xfce4-panel xfce4-power-manager xfce4-pulseaudio-plugin \
+	thunar xfce4-panel xfce4-power-manager xfce4-pulseaudio-plugin \
 	virtualbox6.1-bin virtualbox6.1-bin-guest-iso virtualbox6.1-ext-oracle &
 
 systemctl enable dhcpcd
@@ -188,7 +188,11 @@ systemctl enable cups
 # git clone https://github.com/warpaint9299/dwm-6.4 && \
 # ln -sf ~/.local/dwm-6.4 ~/.dwm
 # ln -sf ~/.local/dwm-6.4/.xinitrc ~/.xinitrc
+# sudo make clean install
 # 
+# git clone https://github.com/warpaint9299/st-0.9
+# sudo make clean install
+#
 # git clone https://github.com/warpaint9299/wallpaper && \
 # ln -sf ~/.local/wallpaper ~/.wallpaper
 
