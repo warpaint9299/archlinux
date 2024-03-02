@@ -148,8 +148,7 @@ else
 fi
 
 PROMPT="$POWERLINE_SEC1_BG$POWERLINE_SEC1_TXT  $POWERLINE_USER_NAME $VENV_STATUS%k%f$POWERLINE_SEC1_FG%K{blue}"$'\ue0b0'"%k%f%F{black}%K{blue}   "$POWERLINE_PATH" %k%f%F{blue}%K{white}"$'\ue0b0'""$POWERLINE_GIT_INFO_LEFT""$'\ue0b0'""%s"
-"%F{black}%K{yellow}" ^o^%k%f%F{yellow}"$'\ue0b0'"%f%k"" "
-
+"%F{black}%K{yellow}"  ^o^%k%f%F{yellow}"$'\ue0b0'"%f%k"" "
 
 if [ "$POWERLINE_NO_BLANK_LINE" = "" ]; then
     PROMPT="
