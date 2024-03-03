@@ -157,7 +157,7 @@ yay -S xorg xorg-xinit \
 	bluez bluez-utils bluez-obex \
 	screenkey fzf ranger feh rofi blueman networkmanager network-manager-applet \
 	jre11-openjdk jre11-openjdk-headless make cmake \
-	w3m ueberzug evince-no-gnome yesplaymusic \
+	w3m catdoc docx2txt mediainfo highlight ueberzug evince-no-gnome yesplaymusic \
 	powerline-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra \
 	ttf-nerd-fonts-symbols  ttf-victor-mono-nerd \
 	unzip rar flameshot obs-studio \
