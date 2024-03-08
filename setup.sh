@@ -4,8 +4,120 @@ timedatectl set-ntp true
 timedatectl status
 
 cat << EOF > /etc/pacman.d/mirrorlist
+## China
 Server = https://mirrors.aliyun.com/archlinux/\$repo/os/\$arch
+Server = https://mirrors.bfsu.edu.cn/archlinux/\$repo/os/\$arch
+Server = https://mirrors.cqu.edu.cn/archlinux/\$repo/os/\$arch
+Server = https://mirrors.hit.edu.cn/archlinux/\$repo/os/\$arch
+Server = https://mirrors.jlu.edu.cn/archlinux/\$repo/os/\$arch
+Server = https://mirrors.jxust.edu.cn/archlinux/\$repo/os/\$arch
+Server = https://mirrors.neusoft.edu.cn/archlinux/\$repo/os/\$arch
+Server = https://mirrors.nju.edu.cn/archlinux/\$repo/os/\$arch
+Server = https://mirrors.njupt.edu.cn/archlinux/\$repo/os/\$arch
+Server = https://mirror.nyist.edu.cn/archlinux/\$repo/os/\$arch
+Server = https://mirrors.qlu.edu.cn/archlinux/\$repo/os/\$arch
+Server = https://mirror.redrock.team/archlinux/\$repo/os/\$arch
+Server = https://mirrors.shanghaitech.edu.cn/archlinux/\$repo/os/\$arch
+Server = https://mirrors.sjtug.sjtu.edu.cn/archlinux/\$repo/os/\$arch
+Server = https://mirrors.tuna.tsinghua.edu.cn/archlinux/\$repo/os/\$arch
 Server = https://mirrors.ustc.edu.cn/archlinux/\$repo/os/\$arch
+Server = https://mirrors.wsyu.edu.cn/archlinux/\$repo/os/\$arch
+Server = https://mirrors.xjtu.edu.cn/archlinux/\$repo/os/\$arch
+
+## Hong Kong
+Server = https://asia.mirror.pkgbuild.com/\$repo/os/\$arch
+Server = https://mirror-hk.koddos.net/archlinux/\$repo/os/\$arch
+Server = https://hkg.mirror.rackspace.com/archlinux/\$repo/os/\$arch
+Server = https://arch-mirror.wtako.net/\$repo/os/\$arch
+Server = https://mirror.xtom.com.hk/archlinux/\$repo/os/\$arch
+
+## Taiwan
+Server = https://mirror.archlinux.tw/ArchLinux/\$repo/os/\$arch
+Server = https://free.nchc.org.tw/arch/\$repo/os/\$arch
+Server = https://ncuesaweb.ncue.edu.tw/linux/archlinux/\$repo/os/\$arch
+Server = https://archlinux.cs.nycu.edu.tw/\$repo/os/\$arch
+Server = https://ftp.yzu.edu.tw/Linux/archlinux/\$repo/os/\$arch
+
+## Japan
+Server = https://mirrors.cat.net/archlinux/\$repo/os/\$arch
+Server = https://jp.mirrors.cicku.me/archlinux/\$repo/os/\$arch
+Server = https://ftp.jaist.ac.jp/pub/Linux/ArchLinux/\$repo/os/\$arch
+Server = https://repo.jing.rocks/archlinux/\$repo/os/\$arch
+Server = https://mirror.nishi.network/archlinux/\$repo/os/\$arch
+Server = https://mirror.saebasol.org/archlinux/\$repo/os/\$arch
+
+## United States
+Server = https://mirror.adectra.com/archlinux/\$repo/os/\$arch
+Server = https://mirror.arizona.edu/archlinux/\$repo/os/\$arch
+Server = https://arlm.tyzoid.com/\$repo/os/\$arch
+Server = https://mirror.ava.dev/archlinux/\$repo/os/\$arch
+Server = https://mirrors.bjg.at/arch/\$repo/os/\$arch
+Server = https://mirrors.bloomu.edu/archlinux/\$repo/os/\$arch
+Server = https://us.mirrors.cicku.me/archlinux/\$repo/os/\$arch
+Server = https://mirror.clarkson.edu/archlinux/\$repo/os/\$arch
+Server = https://arch.mirror.constant.com/\$repo/os/\$arch
+Server = https://mirror.cybersecurity.nmt.edu/archlinux/\$repo/os/\$arch
+Server = https://mirror.ette.biz/archlinux/\$repo/os/\$arch
+Server = https://codingflyboy.mm.fcix.net/archlinux/\$repo/os/\$arch
+Server = https://coresite.mm.fcix.net/archlinux/\$repo/os/\$arch
+Server = https://forksystems.mm.fcix.net/archlinux/\$repo/os/\$arch
+Server = https://irltoolkit.mm.fcix.net/archlinux/\$repo/os/\$arch
+Server = https://mirror.fcix.net/archlinux/\$repo/os/\$arch
+Server = https://mnvoip.mm.fcix.net/archlinux/\$repo/os/\$arch
+Server = https://nnenix.mm.fcix.net/archlinux/\$repo/os/\$arch
+Server = https://nocix.mm.fcix.net/archlinux/\$repo/os/\$arch
+Server = https://ohioix.mm.fcix.net/archlinux/\$repo/os/\$arch
+Server = https://opencolo.mm.fcix.net/archlinux/\$repo/os/\$arch
+Server = https://ridgewireless.mm.fcix.net/archlinux/\$repo/os/\$arch
+Server = https://southfront.mm.fcix.net/archlinux/\$repo/os/\$arch
+Server = https://uvermont.mm.fcix.net/archlinux/\$repo/os/\$arch
+Server = https://volico.mm.fcix.net/archlinux/\$repo/os/\$arch
+Server = https://ziply.mm.fcix.net/archlinux/\$repo/os/\$arch
+Server = https://america.mirror.pkgbuild.com/\$repo/os/\$arch
+Server = https://arch.goober.cloud/\$repo/os/\$arch
+Server = https://mirror.hackingand.coffee/arch/\$repo/os/\$arch
+Server = https://mirror.hodgepodge.dev/archlinux/\$repo/os/\$arch
+Server = https://mirror.hostup.org/archlinux/\$repo/os/\$arch
+Server = https://arch.hu.fo/archlinux/\$repo/os/\$arch
+Server = https://repo.ialab.dsu.edu/archlinux/\$repo/os/\$arch
+Server = https://mirrors.iu13.net/archlinux/\$repo/os/\$arch
+Server = https://arch.mirror.ivo.st/\$repo/os/\$arch
+Server = https://mirrors.kernel.org/archlinux/\$repo/os/\$arch
+Server = https://mirror.dal10.us.leaseweb.net/archlinux/\$repo/os/\$arch
+Server = https://mirror.mia11.us.leaseweb.net/archlinux/\$repo/os/\$arch
+Server = https://mirror.sfo12.us.leaseweb.net/archlinux/\$repo/os/\$arch
+Server = https://mirror.wdc1.us.leaseweb.net/archlinux/\$repo/os/\$arch
+Server = https://mirror.lty.me/archlinux/\$repo/os/\$arch
+Server = https://mirrors.lug.mtu.edu/archlinux/\$repo/os/\$arch
+Server = https://m.lqy.me/arch/\$repo/os/\$arch
+Server = https://archlinux.macarne.com/\$repo/os/\$arch
+Server = https://mirror.kaminski.io/archlinux/\$repo/os/\$arch
+Server = https://iad.mirrors.misaka.one/archlinux/\$repo/os/\$arch
+Server = https://mirrors.mit.edu/archlinux/\$repo/os/\$arch
+Server = https://mirrors.ocf.berkeley.edu/archlinux/\$repo/os/\$arch
+Server = https://archmirror1.octyl.net/\$repo/os/\$arch
+Server = https://ftp.osuosl.org/pub/archlinux/\$repo/os/\$arch
+Server = https://dfw.mirror.rackspace.com/archlinux/\$repo/os/\$arch
+Server = https://iad.mirror.rackspace.com/archlinux/\$repo/os/\$arch
+Server = https://ord.mirror.rackspace.com/archlinux/\$repo/os/\$arch
+Server = https://mirrors.radwebhosting.com/archlinux/\$repo/os/\$arch
+Server = https://plug-mirror.rcac.purdue.edu/archlinux/\$repo/os/\$arch
+Server = https://mirrors.rit.edu/archlinux/\$repo/os/\$arch
+Server = https://mirrors.rutgers.edu/archlinux/\$repo/os/\$arch
+Server = https://mirrors.sonic.net/archlinux/\$repo/os/\$arch
+Server = https://mirror.phx1.us.spryservers.net/archlinux/\$repo/os/\$arch
+Server = https://arch.mirror.square-r00t.net/\$repo/os/\$arch
+Server = https://mirror.stjschools.org/arch/\$repo/os/\$arch
+Server = https://ftp.sudhip.com/archlinux/\$repo/os/\$arch
+Server = https://mirror.pit.teraswitch.com/archlinux/\$repo/os/\$arch
+Server = https://mirror.the-repo.org/ArchMirror/\$repo/os/\$arch
+Server = https://mirror.theash.xyz/arch/\$repo/os/\$arch
+Server = https://mirror.tmmworkshop.com/archlinux/\$repo/os/\$arch
+Server = https://mirror.umd.edu/archlinux/\$repo/os/\$arch
+Server = https://mirrors.vectair.net/archlinux/\$repo/os/\$arch
+Server = https://mirrors.xtom.com/archlinux/\$repo/os/\$arch
+Server = https://mirror.zackmyers.io/archlinux/\$repo/os/\$arch
+Server = https://zxcvfdsa.com/arch/\$repo/os/\$arch
 EOF
 
 cat << EOF >> /etc/pacman.conf
@@ -155,7 +267,7 @@ yay -S xorg xorg-xinit \
 	zsh-syntax-highlighting zsh-autosuggestions \
 	ntfs-3g hplip cups \
 	bluez bluez-utils bluez-obex \
-	screenkey fzf ranger feh rofi blueman networkmanager network-manager-applet \
+	screenkey fzf ranger feh rofi greenclip blueman networkmanager network-manager-applet \
 	jre11-openjdk jre11-openjdk-headless make cmake \
 	w3m catdoc docx2txt mediainfo highlight ueberzug evince-no-gnome yesplaymusic \
 	powerline-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra \
