@@ -265,11 +265,12 @@ yay -S xorg xorg-xinit \
 	alsa-utils pavucontrol apulse sof-firmware alsa-firmware alsa-ucm-conf \
 	mesa lib32-mesa xf86-video-amdgpu vulkan-radeon lib32-vulkan-radeon libva-mesa-driver lib32-libva-mesa-driver mesa-vdpau lib32-mesa-vdpau \
 	zsh-syntax-highlighting zsh-autosuggestions \
-	ntfs-3g hplip cups \
+	ntfs-3g hplip cups iptables man man-pages goldendict \
 	bluez bluez-utils bluez-obex \
 	screenkey fzf ranger feh rofi greenclip blueman networkmanager network-manager-applet \
 	jre11-openjdk jre11-openjdk-headless make cmake \
 	w3m catdoc docx2txt mediainfo highlight ueberzug evince-no-gnome yesplaymusic \
+	adobe-source-han-sans-cn-fonts adobe-source-han-serif-cn-fonts \
 	powerline-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra \
 	ttf-nerd-fonts-symbols  ttf-victor-mono-nerd \
 	unzip rar flameshot obs-studio \
@@ -279,6 +280,7 @@ yay -S xorg xorg-xinit \
 systemctl enable dhcpcd
 systemctl enable NetworkManager
 systemctl enable bluetooth
+systemctl enable iptables
 systemctl enable cups
 
 # su warpaint
