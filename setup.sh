@@ -259,7 +259,7 @@ pacman -S archlinuxcn-keyring
 pacman -S yay git
 
 yay -S xorg xorg-xinit \
-	xdg-user-dirs xclip xautolock i3lock \
+	xdg-user-dirs xclip xautolock arandr i3lock \
 	alacritty firefox-esr google-chrome \
 	fcitx5-im fcitx5-chinese-addons fcitx5-material-color \
 	alsa-utils pavucontrol apulse sof-firmware alsa-firmware alsa-ucm-conf \
@@ -267,7 +267,7 @@ yay -S xorg xorg-xinit \
 	zsh-syntax-highlighting zsh-autosuggestions \
 	ntfs-3g hplip cups iptables man man-pages goldendict \
 	bluez bluez-utils bluez-obex \
-	screenkey fzf ranger feh rofi greenclip blueman networkmanager network-manager-applet \
+	screenkey fzf ranger tmux feh rofi greenclip blueman networkmanager network-manager-applet \
 	jre11-openjdk jre11-openjdk-headless make cmake \
 	w3m catdoc docx2txt mediainfo highlight ueberzug evince-no-gnome yesplaymusic \
 	adobe-source-han-sans-cn-fonts adobe-source-han-serif-cn-fonts \
