@@ -295,6 +295,9 @@ systemctl enable cups
 # ln -sf ~/.local/archlinux/picom ~/.conf/picom
 # ln -sf ~/.local/archlinux/powerline/powerline.zsh-theme ~/.oh-my-zsh/themes/powerline.zsh-theme
 # ln -sf ~/.local/archlinux/oh-my-zsh/zshrc ~/.zshrc
+#
+# git clone https://github.com/warpaint9299/tpm ~/.tmux/plugins/tpm && \
+# ln -sf ~/.local/archlinux/tmux/tmux.conf ~/.tmux.conf
 # 
 # git clone https://github.com/warpaint9299/nvim-0.9 && \
 # ln -sf ~/.local/nvim-0.9 ~/.config/nvim
