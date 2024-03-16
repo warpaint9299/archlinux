@@ -301,6 +301,8 @@ systemctl enable cups
 # ln -sf ~/.local/archlinux/picom ~/.config/picom
 # ln -sf ~/.local/archlinux/powerline/powerline.zsh-theme ~/.oh-my-zsh/themes/powerline.zsh-theme
 # ln -sf ~/.local/archlinux/oh-my-zsh/zshrc ~/.zshrc
+# ln -sf ~/.local/archlinux/oh-my-zsh/zsh-autosuggestions ~/.oh-my-zsh/plugins/zsh-autosuggestions
+# ln -sf ~/.local/archlinux/oh-my-zsh/zsh-syntax-highlighting ~/.oh-my-zsh/plugins/zsh-syntax-highlighting
 # ln -sf ~/.local/archlinux/tmux/tmux.conf ~/.tmux.conf
 # ln -sf ~/.local/nvim-0.9 ~/.config/nvim
 # ln -sf ~/.local/dwm-6.4 ~/.dwm
