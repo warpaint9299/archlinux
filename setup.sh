@@ -285,14 +285,14 @@ systemctl enable cups
 
 # su warpaint
 # cd ~
-# sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" && \
-# 
 # mkdir -p ~/.local
+# mkdir -p ~/.config
+# sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" && \
 # cd ~/.local
 # 
 # git clone https://github.com/warpaint9299/archlinux.git && \
-# ln -sf ~/.local/archlinux/alacritty ~/.conf/alacritty
-# ln -sf ~/.local/archlinux/picom ~/.conf/picom
+# ln -sf ~/.local/archlinux/alacritty ~/.config/alacritty
+# ln -sf ~/.local/archlinux/picom ~/.config/picom
 # ln -sf ~/.local/archlinux/powerline/powerline.zsh-theme ~/.oh-my-zsh/themes/powerline.zsh-theme
 # ln -sf ~/.local/archlinux/oh-my-zsh/zshrc ~/.zshrc
 #
@@ -305,11 +305,15 @@ systemctl enable cups
 # git clone https://github.com/warpaint9299/dwm-6.4 && \
 # ln -sf ~/.local/dwm-6.4 ~/.dwm
 # ln -sf ~/.local/dwm-6.4/.xinitrc ~/.xinitrc
-# sudo make clean install
-# 
-# git clone https://github.com/warpaint9299/st-0.9
+# cd ~/.local/dwm-6.4/
 # sudo make clean install
 #
+# cd ~/.local
+# git clone https://github.com/warpaint9299/st-0.9
+# cd ~/.local/st-0.9/
+# sudo make clean install
+#
+# cd ~/.local
 # git clone https://github.com/warpaint9299/wallpaper && \
 # ln -sf ~/.local/wallpaper ~/.wallpaper
 
