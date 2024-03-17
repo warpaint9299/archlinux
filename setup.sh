@@ -259,7 +259,7 @@ pacman -S archlinuxcn-keyring
 pacman -S yay git
 
 yay -S xorg xorg-xinit \
-	xdg-user-dirs xclip xautolock arandr i3lock \
+	xdg-user-dirs xclip xdotool xautolock arandr i3lock \
 	alacritty firefox-esr google-chrome \
 	fcitx5-im fcitx5-chinese-addons fcitx5-material-color \
 	alsa-utils pavucontrol apulse sof-firmware alsa-firmware alsa-ucm-conf \
@@ -295,8 +295,7 @@ systemctl enable cups
 # git clone https://github.com/warpaint9299/nvim-0.9 && \
 # git clone https://github.com/warpaint9299/dwm-6.4 && \
 # git clone https://github.com/warpaint9299/wallpaper && \
-# git clone https://github.com/warpaint9299/st-0.9
-#
+# git clone https://github.com/warpaint9299/st-0.9 && \
 # ln -sf ~/.local/archlinux/alacritty ~/.config/alacritty
 # ln -sf ~/.local/archlinux/picom ~/.config/picom
 # ln -sf ~/.local/archlinux/powerline/powerline.zsh-theme ~/.oh-my-zsh/themes/powerline.zsh-theme
@@ -315,6 +314,5 @@ systemctl enable cups
 # cd ~/.local/st-0.9/
 # sudo make clean install
 #
-
 # exit
 # umount -R /mnt
