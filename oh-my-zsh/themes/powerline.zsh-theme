@@ -1,0 +1,1 @@
+/home/warpaint/.local/archlinux/powerline/powerline.zsh-theme
