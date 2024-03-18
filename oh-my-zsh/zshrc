@@ -28,9 +28,7 @@ eval "$(zoxide init zsh)"
 
 # Uncomment one of the following lines to change the auto-update behavior
 zstyle ':fzf-tab:*' fzf-command
-zstyle ':fzf-tab:*' continuous-trigger '/'
 zstyle ':fzf-tab:*' fzf-bindings 'space:accept'
-# zstyle ':fzf-tab:*' accept-line enter
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS="true"
 
