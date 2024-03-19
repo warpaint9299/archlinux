@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+
 systemctl stop reflector.service
 timedatectl set-ntp true
 timedatectl status
@@ -285,30 +286,15 @@ systemctl enable cups
 
 # su warpaint
 # cd ~
-# mkdir -p ~/.local
-# mkdir -p ~/.config
-# cd ~/.local
 #
-# git clone https://github.com/warpaint9299/archlinux.git && \
-# git clone https://github.com/warpaint9299/tpm ~/.tmux/plugins/tpm && \
-# git clone https://github.com/warpaint9299/nvim-0.9.git && \
-# git clone https://github.com/warpaint9299/dwm-6.4.git && \
-# git clone https://github.com/warpaint9299/wallpaper.git && \
-# git clone https://github.com/warpaint9299/st-0.9.git && \
-# ln -sf ~/.local/archlinux/alacritty ~/.config/alacritty
-# ln -sf ~/.local/archlinux/picom ~/.config/picom
-# ln -sf ~/.local/archlinux/oh-my-zsh ~/.oh-my-zsh
-# ln -sf ~/.local/archlinux/oh-my-zsh/zshrc ~/.zshrc
-# ln -sf ~/.local/archlinux/tmux/tmux.conf ~/.tmux.conf
-# ln -sf ~/.local/nvim-0.9 ~/.config/nvim
-# ln -sf ~/.local/dwm-6.4 ~/.dwm
-# ln -sf ~/.local/dwm-6.4/.xinitrc ~/.xinitrc
-# ln -sf ~/.local/wallpaper ~/.wallpaper
+# git clone https://github.com/warpaint9299/dotfiles.git ~/.dotfiles && \
+# cd ~/.dotfiles
+# stow .
 #
-# cd ~/.local/dwm-6.4/
+# cd ~/.dwm
 # sudo make clean install
 #
-# cd ~/.local/st-0.9/
+# cd ~/.st
 # sudo make clean install
 #
 # exit
