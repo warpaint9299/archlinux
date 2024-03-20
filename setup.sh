@@ -133,7 +133,7 @@ pacman -Syu haveged
 systemctl start haveged
 systemctl enable haveged
 
-rm -fr /etc/pacman.d/gnupg
+rm -rf /etc/pacman.d/gnupg
 pacman-key --init
 pacman-key --populate archlinux
 
@@ -286,6 +286,7 @@ systemctl enable cups
 
 # su warpaint
 # cd ~
+# mkdir -p ~/{.config, .local}
 #
 # git clone https://github.com/warpaint9299/dotfiles.git ~/.dotfiles && \
 # cd ~/.dotfiles
