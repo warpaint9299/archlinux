@@ -270,7 +270,7 @@ yay -S xorg xorg-xinit \
 	bluez bluez-utils bluez-obex \
 	screenkey fzf ranger tmux feh rofi greenclip blueman networkmanager network-manager-applet \
 	jre11-openjdk jre11-openjdk-headless make cmake \
-	stow zoxide w3m catdoc docx2txt mediainfo highlight ueberzug evince yesplaymusic \
+	stow zoxide w3m catdoc docx2txt mediainfo highlight ueberzug okular yesplaymusic \
 	adobe-source-han-sans-cn-fonts adobe-source-han-serif-cn-fonts \
 	powerline-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra \
 	ttf-nerd-fonts-symbols  ttf-victor-mono-nerd \
