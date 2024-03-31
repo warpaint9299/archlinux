@@ -270,12 +270,12 @@ yay -S xorg xorg-xinit \
 	bluez bluez-utils bluez-obex \
 	screenkey fzf ranger tmux feh rofi greenclip blueman networkmanager network-manager-applet \
 	jre11-openjdk jre11-openjdk-headless make cmake \
-	stow zoxide w3m catdoc docx2txt mediainfo highlight ueberzug okular \
-	translate-shell yesplaymusic  p7zip \
+	stow zoxide w3m catdoc docx2txt mediainfo highlight ueberzug okular ebook-tools kdegraphics-mobipocket xchm \
+	translate-shell yesplaymusic \
 	adobe-source-han-sans-cn-fonts adobe-source-han-serif-cn-fonts \
 	powerline-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra \
 	ttf-nerd-fonts-symbols  ttf-victor-mono-nerd \
-	unzip rar flameshot obs-studio \
+	unzip rar p7zip flameshot obs-studio \
 	thunar xfce4-panel xfce4-power-manager xfce4-pulseaudio-plugin \
 	virtualbox6.1-bin virtualbox6.1-bin-guest-iso virtualbox6.1-ext-oracle &
 
