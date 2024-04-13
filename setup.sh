@@ -169,9 +169,9 @@ pacman-key --populate archlinux
 # mount /dev/nvme0n1p1 /mnt/boot/efi
 # lsblk
 
-pacstrap /mnt base base-devel linux linux-headers linux-firmware \
+pacstrap /mnt base base-devel linux-lts linux-lts-headers linux-firmware \
 	sudo dhcpcd iwd neovim zsh \
-	lvm2 amd-ucode grub efibootmgr
+	lvm2 btrfs-progs amd-ucode grub efibootmgr
 
 genfstab -U -p /mnt >> /mnt/etc/fstab
 
@@ -265,7 +265,6 @@ yay -S xorg xorg-xinit \
 	fcitx5-im fcitx5-chinese-addons fcitx5-material-color \
 	alsa-utils pavucontrol apulse sof-firmware alsa-firmware alsa-ucm-conf \
 	mesa lib32-mesa xf86-video-amdgpu vulkan-radeon lib32-vulkan-radeon libva-mesa-driver lib32-libva-mesa-driver mesa-vdpau lib32-mesa-vdpau \
-	zsh-syntax-highlighting zsh-autosuggestions \
 	ntfs-3g hplip cups iptables man man-pages goldendict \
 	bluez bluez-utils bluez-obex \
 	screenkey fzf ranger tmux feh rofi greenclip blueman networkmanager network-manager-applet \
