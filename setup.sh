@@ -261,7 +261,7 @@ pacman -S yay git
 
 yay -S xorg xorg-xinit \
 	xorg-xprop xdg-user-dirs xclip xdotool xautolock arandr i3lock \
-	alacritty firefox-esr google-chrome \
+	alacritty firefox-esr google-chrome downgrade \
 	fcitx5-im fcitx5-chinese-addons fcitx5-material-color \
 	alsa-utils pavucontrol apulse sof-firmware alsa-firmware alsa-ucm-conf \
 	mesa lib32-mesa xf86-video-amdgpu vulkan-radeon lib32-vulkan-radeon libva-mesa-driver lib32-libva-mesa-driver mesa-vdpau lib32-mesa-vdpau \
