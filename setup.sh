@@ -268,7 +268,7 @@ yay -S xorg xorg-xinit \
 	ntfs-3g hplip cups iptables man man-pages goldendict \
 	bluez bluez-utils bluez-obex \
 	screenkey fzf ranger tmux feh rofi greenclip blueman networkmanager network-manager-applet \
-	jre11-openjdk jre11-openjdk-headless make cmake \
+	jdk11-openjdk jre11-openjdk-headless make cmake \
 	stow zoxide w3m catdoc docx2txt mediainfo highlight ueberzug okular ebook-tools kdegraphics-mobipocket xchm \
 	translate-shell yesplaymusic \
 	adobe-source-han-sans-cn-fonts adobe-source-han-serif-cn-fonts \
