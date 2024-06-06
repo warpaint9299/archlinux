@@ -275,7 +275,7 @@ yay -S xorg xorg-xinit \
 	powerline-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra \
 	ttf-nerd-fonts-symbols  ttf-victor-mono-nerd \
 	unzip rar p7zip flameshot obs-studio \
-	thunar xfce4-panel xfce4-power-manager xfce4-pulseaudio-plugin \
+	thunar xfce4-panel xfce4-power-manager xfce4-pulseaudio-plugin xfce4-notes-plugin \
 	virtualbox6.1-bin virtualbox6.1-bin-guest-iso virtualbox6.1-ext-oracle &
 
 systemctl enable dhcpcd
