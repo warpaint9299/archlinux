@@ -260,7 +260,7 @@ pacman -S archlinuxcn-keyring
 pacman -S yay git
 
 yay -S xorg xorg-xinit \
-	xorg-xprop xdg-user-dirs xclip xdotool xautolock arandr i3lock \
+	xorg-xprop xdg-user-dirs xclip xdotool xautolock arandr i3lock xorg-server-xephyr \
 	alacritty firefox-esr google-chrome downgrade \
 	fcitx5-im fcitx5-chinese-addons fcitx5-material-color \
 	alsa-utils pavucontrol apulse sof-firmware alsa-firmware alsa-ucm-conf \
