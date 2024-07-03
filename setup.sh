@@ -139,9 +139,9 @@ pacman-key --populate archlinux
 
 # modprobe dm-crypt
 # modprobe dm-mod
-# 1. /boot/efi: 512M 
-# 2. /boot: 4G 
-# 3. /: 255G 
+# 1. /boot/efi: 512M
+# 2. /boot: 4G
+# 3. /: 255G
 # 4. /home:left_space
 ## encrypt root partition
 # cryptsetup luksFormat -v -s 512 -h sha512 /dev/nvme0n1p3
@@ -276,6 +276,7 @@ yay -S xorg xorg-xinit \
 	ttf-nerd-fonts-symbols  ttf-victor-mono-nerd \
 	unzip rar p7zip flameshot obs-studio \
 	thunar xfce4-panel xfce4-power-manager xfce4-pulseaudio-plugin xfce4-wavelan-plugin xfce4-notes-plugin \
+	texlive-basic texlive-latex texlive-latexrecommended texlive-latexextra texlive-fontsrecommended  texlive-fontsextra  texlive-xetex  texlive-luatex texlive-bibtexextra texlive-mathscience texlive-langchinese texlive-langenglish texlive-langjapanese \
 	virtualbox6.1-bin virtualbox6.1-bin-guest-iso virtualbox6.1-ext-oracle &
 
 systemctl enable dhcpcd
