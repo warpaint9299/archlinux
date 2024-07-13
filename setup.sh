@@ -270,7 +270,7 @@ yay -S xorg xorg-xinit \
 	screenkey fzf ranger tmux feh rofi btop greenclip blueman networkmanager network-manager-applet \
 	jdk11-openjdk jre11-openjdk-headless make cmake \
 	stow zoxide w3m catdoc docx2txt mediainfo highlight ueberzug okular ebook-tools kdegraphics-mobipocket xchm \
-	translate-shell yesplaymusic \
+	translate-shell yesplaymusic tigervnc-viewer \
 	adobe-source-han-sans-cn-fonts adobe-source-han-serif-cn-fonts \
 	powerline-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra \
 	ttf-nerd-fonts-symbols  ttf-victor-mono-nerd \
