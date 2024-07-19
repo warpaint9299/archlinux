@@ -265,7 +265,7 @@ yay -S xorg xorg-xinit \
 	fcitx5-im fcitx5-chinese-addons fcitx5-material-color \
 	alsa-utils pavucontrol apulse sof-firmware alsa-firmware alsa-ucm-conf \
 	mesa lib32-mesa xf86-video-amdgpu vulkan-radeon lib32-vulkan-radeon libva-mesa-driver lib32-libva-mesa-driver mesa-vdpau lib32-mesa-vdpau \
-	ntfs-3g hplip cups iptables man man-pages goldendict \
+	ntfs-3g hplip cups iptables man man-pages goldendict-ng-git \
 	bluez bluez-utils bluez-obex \
 	screenkey fzf ranger tmux feh rofi btop picom-simpleanims-git blueman networkmanager network-manager-applet \
 	jdk11-openjdk jre11-openjdk-headless make cmake \
