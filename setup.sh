@@ -275,7 +275,7 @@ yay -S xorg xorg-xinit \
 	powerline-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra \
 	ttf-nerd-fonts-symbols  ttf-victor-mono-nerd \
 	unzip rar p7zip flameshot obs-studio superproductivity-bin \
-	thunar xfce4-panel xfce4-power-manager xfce4-pulseaudio-plugin xfce4-wavelan-plugin xfce4-notes-plugin \
+	thunar xfce4-panel xfce4-power-manager xfce4-pulseaudio-plugin xfce4-wavelan-plugin \
 	texlive-basic texlive-latex texlive-latexrecommended texlive-latexextra texlive-fontsrecommended  texlive-fontsextra  texlive-xetex  texlive-luatex texlive-bibtexextra texlive-mathscience texlive-langchinese texlive-langenglish texlive-langjapanese \
 	virtualbox6.1-bin virtualbox6.1-bin-guest-iso virtualbox6.1-ext-oracle &
 
