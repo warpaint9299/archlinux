@@ -273,7 +273,7 @@ yay -S xorg xorg-xinit xorg-xrdb \
 	translate-shell yesplaymusic tigervnc-viewer \
 	adobe-source-han-sans-cn-fonts adobe-source-han-serif-cn-fonts \
 	powerline-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra \
-	ttf-nerd-fonts-symbols  ttf-victor-mono-nerd \
+	ttf-nerd-fonts-symbols  ttf-victor-mono-nerd ttf-fantasque-nerd \
 	unzip rar p7zip flameshot obs-studio superproductivity-bin \
 	thunar xfce4-panel xfce4-power-manager xfce4-pulseaudio-plugin xfce4-wavelan-plugin \
 	texlive-basic texlive-latex texlive-latexrecommended texlive-latexextra texlive-fontsrecommended  texlive-fontsextra  texlive-xetex  texlive-luatex texlive-bibtexextra texlive-mathscience texlive-langchinese texlive-langenglish texlive-langjapanese \
