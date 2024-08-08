@@ -267,14 +267,14 @@ yay -S xorg xorg-xinit xorg-xrdb \
 	mesa lib32-mesa xf86-video-amdgpu vulkan-radeon lib32-vulkan-radeon libva-mesa-driver lib32-libva-mesa-driver mesa-vdpau lib32-mesa-vdpau \
 	ntfs-3g hplip cups iptables man man-pages goldendict-ng-git \
 	bluez bluez-utils bluez-obex \
-	screenkey fzf ranger tmux feh rofi btop picom-simpleanims-git blueman networkmanager network-manager-applet \
+	screenkey fzf ranger tmux feh rofi btop picom-simpleanims-git blueman networkmanager network-manager-applet lsd \
 	jdk11-openjdk jre11-openjdk-headless make cmake \
 	stow zoxide w3m catdoc docx2txt mediainfo highlight ueberzug okular ebook-tools kdegraphics-mobipocket xchm cowsay cmatrix cava \
 	translate-shell yesplaymusic tigervnc-viewer \
 	adobe-source-han-sans-cn-fonts adobe-source-han-serif-cn-fonts \
 	powerline-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra \
 	ttf-nerd-fonts-symbols  ttf-victor-mono-nerd ttf-fantasque-nerd \
-	unzip rar p7zip flameshot obs-studio superproductivity-bin \
+	unzip rar p7zip flameshot obs-studio trilium-bin \
 	thunar xfce4-panel xfce4-power-manager xfce4-pulseaudio-plugin xfce4-wavelan-plugin \
 	texlive-basic texlive-latex texlive-latexrecommended texlive-latexextra texlive-fontsrecommended  texlive-fontsextra  texlive-xetex  texlive-luatex texlive-bibtexextra texlive-mathscience texlive-langchinese texlive-langenglish texlive-langjapanese \
 	virtualbox6.1-bin virtualbox6.1-bin-guest-iso virtualbox6.1-ext-oracle &
