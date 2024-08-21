@@ -261,7 +261,7 @@ pacman -S yay git
 
 yay -S xorg xorg-xinit xorg-xrdb \
 	xorg-xprop xdg-user-dirs xclip xdotool xautolock arandr i3lock xorg-server-xephyr \
-	alacritty firefox-esr google-chrome downgrade \
+	alacritty firefox google-chrome downgrade \
 	fcitx5-im fcitx5-chinese-addons fcitx5-material-color \
 	alsa-utils pavucontrol apulse sof-firmware alsa-firmware alsa-ucm-conf \
 	mesa lib32-mesa xf86-video-amdgpu vulkan-radeon lib32-vulkan-radeon libva-mesa-driver lib32-libva-mesa-driver mesa-vdpau lib32-mesa-vdpau \
@@ -273,7 +273,8 @@ yay -S xorg xorg-xinit xorg-xrdb \
 	translate-shell yesplaymusic tigervnc-viewer \
 	adobe-source-han-sans-cn-fonts adobe-source-han-serif-cn-fonts \
 	powerline-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra \
-	ttf-nerd-fonts-symbols  ttf-victor-mono-nerd ttf-fantasque-nerd \
+	ttf-nerd-fonts-symbols ttf-victor-mono-nerd ttf-fantasque-nerd \
+	ttf-comic-mono-git \
 	unzip rar p7zip flameshot obs-studio trilium-bin \
 	thunar mousepad xfce4-panel xfce4-power-manager xfce4-pulseaudio-plugin xfce4-wavelan-plugin \
 	texlive-basic texlive-latex texlive-latexrecommended texlive-latexextra texlive-fontsrecommended  texlive-fontsextra  texlive-xetex  texlive-luatex texlive-bibtexextra texlive-mathscience texlive-langchinese texlive-langenglish texlive-langjapanese \
