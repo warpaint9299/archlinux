@@ -268,7 +268,7 @@ yay -S xorg xorg-xinit xorg-xrdb \
 	ntfs-3g hplip cups iptables man man-pages goldendict-ng-git \
 	bluez bluez-utils bluez-obex \
 	screenkey fzf ranger tmux feh rofi btop picom-simpleanims-git blueman networkmanager network-manager-applet lsd fd \
-	jdk11-openjdk jre11-openjdk-headless make cmake \
+	jdk11-openjdk jre11-openjdk-headlessopen jdk11-src openjdk11-doc jdk17-openjdk jre17-openjdk-headless openjdk17-src openjdk17-doc make cmake \
 	stow zoxide w3m catdoc docx2txt mediainfo highlight ueberzug okular ebook-tools kdegraphics-mobipocket xchm cowsay cmatrix cava \
 	translate-shell yesplaymusic tigervnc-viewer \
 	adobe-source-han-sans-cn-fonts adobe-source-han-serif-cn-fonts \
