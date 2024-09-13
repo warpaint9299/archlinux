@@ -129,13 +129,12 @@ Include = /etc/pacman.d/mirrorlist
 Server = https://repo.archlinuxcn.org/\$arch
 EOF
 
-pacman -Syu haveged
-systemctl start haveged
-systemctl enable haveged
-
 rm -rf /etc/pacman.d/gnupg
 pacman-key --init
-pacman-key --populate archlinux
+pacman-key --populate archlinux && \
+pacman -Syu haveged && \
+systemctl start haveged && \
+systemctl enable haveged && \
 
 # modprobe dm-crypt
 # modprobe dm-mod
@@ -263,12 +262,14 @@ yay -S xorg xorg-xinit xorg-xrdb \
 	xorg-xprop xdg-user-dirs xclip xdotool xautolock arandr i3lock xorg-server-xephyr \
 	alacritty alacritty-theme-git firefox google-chrome downgrade \
 	fcitx5-im fcitx5-chinese-addons fcitx5-material-color \
+	pluseaudio pulseaudio-alsa pulseaudio-bluetooth \
 	alsa-utils pavucontrol apulse sof-firmware alsa-firmware alsa-ucm-conf \
-	mesa lib32-mesa xf86-video-amdgpu vulkan-radeon lib32-vulkan-radeon libva-mesa-driver lib32-libva-mesa-driver mesa-vdpau lib32-mesa-vdpau \
+	mesa lib32-mesa xf86-video-amdgpu vulkan-radeon lib32-vulkan-radeon \
+	libva-mesa-driver lib32-libva-mesa-driver mesa-vdpau lib32-mesa-vdpau \
 	ntfs-3g hplip cups iptables man man-pages goldendict-ng-git \
 	bluez bluez-utils bluez-obex \
 	screenkey fzf ranger tmux feh rofi btop picom-simpleanims-git blueman networkmanager network-manager-applet lsd fd \
-	jdk11-openjdk jre11-openjdk-headlessopen jdk11-src openjdk11-doc jdk17-openjdk jre17-openjdk-headless openjdk17-src openjdk17-doc make cmake \
+	jdk17-openjdk jre17-openjdk-headless openjdk17-src openjdk17-doc make cmake \
 	stow zoxide w3m catdoc docx2txt mediainfo highlight ueberzug okular ebook-tools kdegraphics-mobipocket xchm cowsay cmatrix cava \
 	translate-shell yesplaymusic tigervnc-viewer \
 	adobe-source-han-sans-cn-fonts adobe-source-han-serif-cn-fonts \
