@@ -260,7 +260,7 @@ pacman -S yay git
 
 yay -S xorg xorg-xinit xorg-xrdb \
 	xorg-xprop xdg-user-dirs xclip xdotool xautolock arandr i3lock xorg-server-xephyr \
-	alacritty alacritty-theme-git firefox google-chrome downgrade \
+	alacritty alacritty-theme-git firefox-esr-bin brave-bin downgrade \
 	fcitx5-im fcitx5-chinese-addons fcitx5-material-color \
 	pluseaudio pulseaudio-alsa pulseaudio-bluetooth \
 	alsa-utils pavucontrol apulse sof-firmware alsa-firmware alsa-ucm-conf \
@@ -277,7 +277,7 @@ yay -S xorg xorg-xinit xorg-xrdb \
 	ttf-nerd-fonts-symbols ttf-victor-mono-nerd ttf-fantasque-nerd \
 	ttf-comic-mono-git kitty \
 	imagemagick, ripgrep unzip rar p7zip flameshot obs-studio kcolorchooser \
-	thunar mousepad xfce4-panel xfce4-power-manager xfce4-pulseaudio-plugin xfce4-wavelan-plugin \
+	thunar gvfs mousepad xfce4-panel xfce4-power-manager xfce4-pulseaudio-plugin xfce4-wavelan-plugin \
 	texlive-basic texlive-latex texlive-latexrecommended texlive-latexextra texlive-fontsrecommended  texlive-fontsextra  texlive-xetex  texlive-luatex texlive-bibtexextra texlive-mathscience texlive-langchinese texlive-langenglish texlive-langjapanese \
 	virtualbox6.1-bin virtualbox6.1-bin-guest-iso virtualbox6.1-ext-oracle &
 
