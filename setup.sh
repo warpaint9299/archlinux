@@ -266,7 +266,7 @@ yay -S xorg xorg-xinit xorg-xrdb \
 	alsa-utils pavucontrol apulse sof-firmware alsa-firmware alsa-ucm-conf \
 	mesa lib32-mesa xf86-video-amdgpu vulkan-radeon lib32-vulkan-radeon \
 	libva-mesa-driver lib32-libva-mesa-driver mesa-vdpau lib32-mesa-vdpau \
-	ntfs-3g hplip cups iptables man man-pages goldendict-ng-git \
+	ntfs-3g hplip cups iptables man man-pages bc goldendict-ng-git \
 	bluez bluez-utils bluez-obex \
 	screenkey fzf ranger tmux feh rofi btop picom-simpleanims-git blueman networkmanager network-manager-applet lsd fd \
 	jdk17-openjdk jre17-openjdk-headless openjdk17-src openjdk17-doc make cmake \
@@ -278,8 +278,10 @@ yay -S xorg xorg-xinit xorg-xrdb \
 	ttf-comic-mono-git kitty dialog freerdp iproute2 libnotify gnu-netcat \
 	imagemagick, ripgrep unzip rar p7zip flameshot obs-studio kcolorchooser \
 	thunar gvfs mousepad xfce4-panel xfce4-power-manager xfce4-pulseaudio-plugin xfce4-wavelan-plugin \
-	texlive-basic texlive-latex texlive-latexrecommended texlive-latexextra texlive-fontsrecommended  texlive-fontsextra  texlive-xetex  texlive-luatex texlive-bibtexextra texlive-mathscience texlive-langchinese texlive-langenglish texlive-langjapanese \
-	virtualbox6.1-bin virtualbox6.1-bin-guest-iso virtualbox6.1-ext-oracle &
+	xfce4-genmon-plugin xfce4-fsguard-plugin xfce4-netload-plugin xfce4-clipman-plugin \
+	texlive-basic texlive-latex texlive-latexrecommended texlive-latexextra texlive-fontsrecommended  texlive-fontsextra \
+	texlive-xetex  texlive-luatex texlive-bibtexextra texlive-mathscience texlive-langchinese texlive-langenglish texlive-langjapanese \
+	virtualbox-bin virtualbox-bin-guest-iso virtualbox-ext-oracle &
 
 systemctl enable dhcpcd
 systemctl enable NetworkManager
