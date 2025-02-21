@@ -279,8 +279,7 @@ yay -S xorg xorg-xinit xorg-xrdb \
 	imagemagick, ripgrep unzip rar p7zip flameshot obs-studio kcolorchooser \
 	thunar gvfs mousepad xfce4-panel xfce4-power-manager xfce4-pulseaudio-plugin xfce4-wavelan-plugin \
 	xfce4-genmon-plugin xfce4-fsguard-plugin xfce4-netload-plugin xfce4-clipman-plugin \
-	texlive-basic texlive-latex texlive-latexrecommended texlive-latexextra texlive-fontsrecommended  texlive-fontsextra \
-	texlive-xetex  texlive-luatex texlive-bibtexextra texlive-mathscience texlive-langchinese texlive-langenglish texlive-langjapanese \
+	texlive texlive-langchinese texlive-langenglish \
 	virtualbox-bin virtualbox-bin-guest-iso virtualbox-ext-oracle &
 
 systemctl enable dhcpcd
