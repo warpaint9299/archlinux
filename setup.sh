@@ -266,7 +266,7 @@ yay -S xorg xorg-xinit xorg-xrdb \
 	alsa-utils pavucontrol apulse sof-firmware alsa-firmware alsa-ucm-conf \
 	mesa lib32-mesa xf86-video-amdgpu vulkan-radeon lib32-vulkan-radeon \
 	libva-mesa-driver lib32-libva-mesa-driver mesa-vdpau lib32-mesa-vdpau \
-	ntfs-3g hplip cups iptables man man-pages bc goldendict-ng-git \
+	ntfs-3g hplip cups iptables man man-pages bc goldendict-ng \
 	bluez bluez-utils bluez-obex lxappearance \
 	screenkey fzf ranger tmux feh rofi btop picom-simpleanims-git blueman networkmanager network-manager-applet lsd fd \
 	jdk17-openjdk jre17-openjdk-headless openjdk17-src openjdk17-doc make cmake \
