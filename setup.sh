@@ -274,12 +274,12 @@ yay -S xorg xorg-xinit xorg-xrdb \
 	translate-shell yesplaymusic tigervnc-viewer drawio-desktop-bin \
 	adobe-source-han-sans-cn-fonts adobe-source-han-serif-cn-fonts \
 	powerline-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra \
-	ttf-nerd-fonts-symbols ttf-victor-mono-nerd ttf-fantasque-nerd \
+	ttf-nerd-fonts-symbols ttf-victor-mono-nerd ttf-icomoon-feather ttf-fantasque-nerd \
 	ttf-comic-mono-git kitty dialog freerdp iproute2 libnotify gnu-netcat \
 	imagemagick, ripgrep unzip rar p7zip flameshot obs-studio kcolorchooser \
 	thunar gvfs mousepad xfce4-panel xfce4-power-manager xfce4-pulseaudio-plugin xfce4-wavelan-plugin \
-	xfce4-genmon-plugin xfce4-fsguard-plugin xfce4-netload-plugin xfce4-clipman-plugin \
-	texlive texlive-langchinese texlive-langenglish \
+	xfce4-genmon-plugin xfce4-fsguard-plugin xfce4-netload-plugin xfce4-clipman-plugin xfce4-indicator-plugin xfce4-eyes-plugin \
+	texlive texlive-langchinese texlive-langenglish ufw gufw qv2ray \
 	virtualbox-bin virtualbox-bin-guest-iso virtualbox-ext-oracle &
 
 systemctl enable dhcpcd
