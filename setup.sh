@@ -260,7 +260,7 @@ pacman -S yay git
 
 yay -S xorg xorg-xinit xorg-xrdb \
 	xorg-xprop xdg-user-dirs xclip xdotool xautolock arandr i3lock xorg-server-xephyr \
-	alacritty alacritty-theme-git firefox-esr-bin brave-bin downgrade \
+	alacritty alacritty-theme-git firefox-esr-bin downgrade \
 	fcitx5-im fcitx5-chinese-addons fcitx5-material-color \
 	pluseaudio pulseaudio-alsa pulseaudio-bluetooth \
 	alsa-utils pavucontrol apulse sof-firmware alsa-firmware alsa-ucm-conf \
@@ -268,16 +268,17 @@ yay -S xorg xorg-xinit xorg-xrdb \
 	libva-mesa-driver lib32-libva-mesa-driver mesa-vdpau lib32-mesa-vdpau \
 	ntfs-3g hplip cups iptables man man-pages bc goldendict-ng \
 	bluez bluez-utils bluez-obex lxappearance rnote xkeysnail \
-	screenkey fzf ranger tmux feh rofi btop picom-simpleanims-git blueman networkmanager network-manager-applet lsd fd \
+	screenkey slop kmag fzf ranger tmux feh rofi btop picom-simpleanims-git blueman networkmanager network-manager-applet lsd fd \
 	jdk17-openjdk jre17-openjdk-headless openjdk17-src openjdk17-doc make cmake \
 	stow zoxide w3m catdoc docx2txt mediainfo highlight ueberzug okular ebook-tools kdegraphics-mobipocket xchm cowsay cmatrix cava \
-	translate-shell yesplaymusic tigervnc-viewer drawio-desktop-bin \
+	translate-shell tigervnc-viewer \
 	adobe-source-han-sans-cn-fonts adobe-source-han-serif-cn-fonts \
 	powerline-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra \
 	ttf-nerd-fonts-symbols ttf-victor-mono-nerd ttf-icomoon-feather ttf-fantasque-nerd \
 	ttf-comic-mono-git kitty dialog freerdp iproute2 libnotify gnu-netcat \
 	imagemagick, ripgrep unzip rar p7zip flameshot obs-studio kcolorchooser \
-	thunar gvfs mousepad xfce4-panel xfce4-power-manager xfce4-pulseaudio-plugin xfce4-wavelan-plugin \
+	thunar thunar-volman thunar-archive-plugin thunar-media-tags-plugin thunar-shares-plugin thunar-vcs-plugin \
+	gvfs mousepad xfce4-panel xfce4-power-manager xfce4-pulseaudio-plugin xfce4-wavelan-plugin \
 	xfce4-genmon-plugin xfce4-fsguard-plugin xfce4-netload-plugin xfce4-clipman-plugin xfce4-indicator-plugin xfce4-eyes-plugin \
 	texlive texlive-langchinese texlive-langenglish ufw gufw qv2ray \
 	virtualbox-bin virtualbox-bin-guest-iso virtualbox-ext-oracle &
