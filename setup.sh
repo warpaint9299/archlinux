@@ -260,9 +260,9 @@ pacman -S yay git
 
 yay -S xorg xorg-xinit xorg-xrdb \
 	xorg-xprop xdg-user-dirs xclip xdotool xautolock arandr i3lock xorg-server-xephyr \
-	alacritty alacritty-theme-git firefox-esr-bin downgrade \
+	ungoogled-chromium firefox-esr-bin downgrade \
 	fcitx5-im fcitx5-chinese-addons fcitx5-material-color \
-	pluseaudio pulseaudio-alsa pulseaudio-bluetooth \
+	pipewire pipewire-pulse pipewire-alsa pipewire-jack \
 	alsa-utils pavucontrol apulse sof-firmware alsa-firmware alsa-ucm-conf \
 	mesa lib32-mesa xf86-video-amdgpu vulkan-radeon lib32-vulkan-radeon \
 	libva-mesa-driver lib32-libva-mesa-driver mesa-vdpau lib32-mesa-vdpau \
