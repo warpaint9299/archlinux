@@ -129,7 +129,7 @@ Include = /etc/pacman.d/mirrorlist
 Server = https://repo.archlinuxcn.org/\$arch
 EOF
 
-rm -rf /etc/pacman.d/gnupg
+pacman -Syy
 pacman-key --init
 pacman-key --populate archlinux && \
 pacman -Syu haveged && \
@@ -253,6 +253,7 @@ EOF
 chattr +i /etc/resolv.conf
 hwclock --systohc
 
+pacman-key --init
 pacman-key --lsign-key "farseerfc@archlinux.org"
 pacman -S archlinuxcn-keyring
 
@@ -260,7 +261,7 @@ pacman -S yay git
 
 yay -S xorg xorg-xinit xorg-xrdb \
 	xorg-xprop xdg-user-dirs xclip xdotool xautolock arandr i3lock xorg-server-xephyr \
-	ungoogled-chromium firefox-esr-bin downgrade \
+	ungoogled-chromium firefox-esr-bin code clang downgrade \
 	fcitx5-im fcitx5-chinese-addons fcitx5-material-color \
 	pipewire pipewire-pulse pipewire-alsa pipewire-jack \
 	alsa-utils pavucontrol apulse sof-firmware alsa-firmware alsa-ucm-conf \
@@ -270,17 +271,18 @@ yay -S xorg xorg-xinit xorg-xrdb \
 	bluez bluez-utils bluez-obex lxappearance rnote xkeysnail \
 	screenkey slop kmag fzf ranger tmux feh rofi btop picom-simpleanims-git blueman networkmanager network-manager-applet lsd fd \
 	jdk17-openjdk jre17-openjdk-headless openjdk17-src openjdk17-doc make cmake \
-	stow zoxide w3m catdoc docx2txt mediainfo highlight ueberzug okular ebook-tools kdegraphics-mobipocket xchm cowsay cmatrix cava \
+	stow zoxide w3m catdoc docx2txt mediainfo highlight okular ebook-tools kdegraphics-mobipocket xchm cowsay cmatrix cava \
 	translate-shell tigervnc-viewer \
 	adobe-source-han-sans-cn-fonts adobe-source-han-serif-cn-fonts \
 	powerline-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra \
-	ttf-nerd-fonts-symbols ttf-victor-mono-nerd ttf-icomoon-feather ttf-fantasque-nerd \
+	ttf-symbola ttf-nerd-fonts-symbols ttf-victor-mono-nerd ttf-icomoon-feather ttf-fantasque-nerd \
+	ttf-lxgw-wenkai ttf-lxgw-wenkai-mono ttf-lxgw-wenkai-tc \
 	ttf-comic-mono-git kitty dialog freerdp iproute2 libnotify gnu-netcat \
 	imagemagick, ripgrep unzip rar p7zip flameshot obs-studio kcolorchooser \
 	thunar thunar-volman thunar-archive-plugin thunar-media-tags-plugin thunar-shares-plugin thunar-vcs-plugin \
 	gvfs mousepad xfce4-panel xfce4-power-manager xfce4-pulseaudio-plugin xfce4-wavelan-plugin \
 	xfce4-genmon-plugin xfce4-fsguard-plugin xfce4-netload-plugin xfce4-clipman-plugin xfce4-indicator-plugin xfce4-eyes-plugin \
-	texlive texlive-langchinese texlive-langenglish ufw gufw qv2ray \
+	ufw gufw \
 	virtualbox-bin virtualbox-bin-guest-iso virtualbox-ext-oracle &
 
 systemctl enable dhcpcd
@@ -296,6 +298,13 @@ systemctl enable cups
 # git clone https://github.com/warpaint9299/dotfiles.git ~/.dotfiles && \
 # cd ~/.dotfiles
 # stow .
+#
+## emoji support for dwmbar
+# cd ~
+# git clone https://github.com/uditkarode/libxft-bgra
+# cd libxft-bgra
+# sh autogen.sh --sysconfdir=/etc --prefix=/usr --mandir=/usr/share/man
+# sudo make install
 #
 # cd ~/.dwm
 # sudo make clean install
