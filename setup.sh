@@ -272,7 +272,7 @@ yay -S xorg xorg-xinit xorg-xrdb \
 	screenkey slop kmag fzf ranger tmux feh rofi btop picom-simpleanims-git blueman networkmanager network-manager-applet lsd fd \
 	jdk17-openjdk jre17-openjdk-headless openjdk17-src openjdk17-doc make cmake \
 	stow zoxide w3m catdoc docx2txt mediainfo highlight okular ebook-tools kdegraphics-mobipocket xchm cowsay cmatrix cava \
-	translate-shell tigervnc-viewer \
+	translate-shell tigervnc-viewer trash-cli \
 	adobe-source-han-sans-cn-fonts adobe-source-han-serif-cn-fonts \
 	powerline-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra \
 	ttf-symbola ttf-nerd-fonts-symbols ttf-victor-mono-nerd ttf-icomoon-feather ttf-fantasque-nerd \
