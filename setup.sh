@@ -261,7 +261,7 @@ pacman -S yay git
 
 yay -S xorg xorg-xinit xorg-xrdb \
 	xorg-xprop xdg-user-dirs xclip xdotool xautolock arandr i3lock xorg-server-xephyr \
-	ungoogled-chromium firefox-esr-bin code clang downgrade \
+	ungoogled-chromium firefox-esr-bin code clang bear downgrade \
 	fcitx5-im fcitx5-chinese-addons fcitx5-material-color \
 	pipewire pipewire-pulse pipewire-alsa pipewire-jack \
 	alsa-utils pavucontrol apulse sof-firmware alsa-firmware alsa-ucm-conf \
@@ -269,7 +269,7 @@ yay -S xorg xorg-xinit xorg-xrdb \
 	libva-mesa-driver lib32-libva-mesa-driver mesa-vdpau lib32-mesa-vdpau \
 	ntfs-3g hplip cups iptables man man-pages bc goldendict-ng \
 	bluez bluez-utils bluez-obex lxappearance rnote xkeysnail \
-	screenkey slop kmag fzf ranger tmux feh rofi btop picom-simpleanims-git blueman networkmanager network-manager-applet lsd fd \
+	screenkey slop kmag fzf ranger ueberzug tmux feh rofi btop picom-simpleanims-git blueman networkmanager network-manager-applet lsd fd \
 	jdk17-openjdk jre17-openjdk-headless openjdk17-src openjdk17-doc make cmake \
 	stow zoxide w3m catdoc docx2txt mediainfo highlight okular ebook-tools kdegraphics-mobipocket xchm cowsay cmatrix cava \
 	translate-shell tigervnc-viewer trash-cli \
