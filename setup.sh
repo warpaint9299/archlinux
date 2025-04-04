@@ -269,7 +269,8 @@ yay -S xorg xorg-xinit xorg-xrdb \
 	libva-mesa-driver lib32-libva-mesa-driver mesa-vdpau lib32-mesa-vdpau \
 	ntfs-3g hplip cups iptables man man-pages bc goldendict-ng \
 	bluez bluez-utils bluez-obex lxappearance rnote xkeysnail \
-	screenkey slop kmag fzf ranger ueberzug tmux feh rofi btop picom-simpleanims-git blueman networkmanager network-manager-applet lsd fd \
+	screenkey slop kmag fzf ranger ueberzug python-pynvim tmux feh rofi btop picom-simpleanims-git \
+	blueman networkmanager network-manager-applet lsd fd \
 	jdk17-openjdk jre17-openjdk-headless openjdk17-src openjdk17-doc make cmake \
 	stow zoxide w3m catdoc docx2txt mediainfo highlight okular ebook-tools kdegraphics-mobipocket xchm cowsay cmatrix cava \
 	translate-shell tigervnc-viewer trash-cli \
