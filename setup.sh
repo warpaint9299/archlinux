@@ -279,7 +279,7 @@ yay -S xorg xorg-xinit xorg-xrdb \
 	ttf-symbola ttf-nerd-fonts-symbols ttf-victor-mono-nerd ttf-icomoon-feather ttf-fantasque-nerd \
 	ttf-lxgw-wenkai ttf-lxgw-wenkai-mono ttf-lxgw-wenkai-tc \
 	ttf-comic-mono-git kitty dialog freerdp iproute2 libnotify gnu-netcat \
-	imagemagick, ripgrep unzip rar p7zip flameshot obs-studio kcolorchooser \
+	imagemagick ripgrep unzip rar p7zip flameshot obs-studio kcolorchooser \
 	thunar thunar-volman thunar-archive-plugin thunar-media-tags-plugin thunar-shares-plugin thunar-vcs-plugin \
 	gvfs mousepad xfce4-panel xfce4-power-manager xfce4-pulseaudio-plugin xfce4-wavelan-plugin \
 	xfce4-genmon-plugin xfce4-fsguard-plugin xfce4-netload-plugin xfce4-clipman-plugin xfce4-indicator-plugin xfce4-eyes-plugin \
@@ -308,10 +308,10 @@ systemctl enable cups
 # sudo make install
 #
 # cd ~/.dwm
-# sudo make clean install
+# sudo make install clean
 #
 # cd ~/.st
-# sudo make clean install
+# sudo make install clean
 #
 # exit
 # umount -R /mnt
