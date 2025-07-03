@@ -136,37 +136,37 @@ pacman -Syu haveged && \
 systemctl start haveged && \
 systemctl enable haveged && \
 
-# modprobe dm-crypt
-# modprobe dm-mod
+modprobe dm-crypt
+modprobe dm-mod
 # 1. /boot/efi: 512M
 # 2. /boot: 4G
 # 3. /: 255G
 # 4. /home:left_space
 ## encrypt root partition
-# cryptsetup luksFormat -v -s 512 -h sha512 /dev/nvme0n1p3
+cryptsetup luksFormat -v -s 512 -h sha512 /dev/nvme0n1p3
 ## enter(Uppercase): YES
 ## type passphrase
-## encrypt home partition
-# cryptsetup luksFormat -v -s 512 -h sha512 /dev/nvme0n1p4
+# encrypt home partition
+cryptsetup luksFormat -v -s 512 -h sha512 /dev/nvme0n1p4
 ## enter(Uppercase): YES
 ## type passphrase
-# cryptsetup open /dev/nvme0n1p3 luks_lvm
+cryptsetup open /dev/nvme0n1p3 crypt_lvm
 ## type passphrase
-# pvcreate /dev/mapper/luks_lvm
-# vgcreate arch /dev/mapper/luks_lvm
-# lvcreate -n root -l +100%FREE arch
-# cryptsetup open /dev/nvme0n1p4 arch-home
-# mkfs.fat -F32 /dev/nvme0n1p1 # /boot/efi
-# mkfs.ext4 /dev/nvme0n1p2 # /boot
-# mkfs.btrfs -L root /dev/mapper/arch-root # /
-# mkfs.btrfs -L home /dev/mapper/arch-home # /home
-# mount /dev/mapper/arch-root /mnt # /
-# mkdir -p /mnt/{boot,home}
-# mount /dev/nvme0n1p2 /mnt/boot # /boot
-# mount /dev/mapper/arch-home /mnt/home # /home
-# mkdir -p /mnt/boot/efi
-# mount /dev/nvme0n1p1 /mnt/boot/efi
-# lsblk
+pvcreate /dev/mapper/crypt_lvm
+vgcreate arch /dev/mapper/crypt_lvm
+lvcreate -n root -l +100%FREE arch
+cryptsetup open /dev/nvme0n1p4 arch-home
+mkfs.fat -F32 /dev/nvme0n1p1 # /boot/efi
+mkfs.ext4 /dev/nvme0n1p2 # /boot
+mkfs.btrfs -L root /dev/mapper/arch-root # /
+mkfs.btrfs -L home /dev/mapper/arch-home # /home
+mount /dev/mapper/arch-root /mnt # /
+mkdir -p /mnt/{boot,home}
+mount /dev/nvme0n1p2 /mnt/boot # /boot
+mount /dev/mapper/arch-home /mnt/home # /home
+mkdir -p /mnt/boot/efi
+mount /dev/nvme0n1p1 /mnt/boot/efi
+lsblk
 
 pacstrap /mnt base base-devel linux-lts linux-lts-headers linux-firmware \
 	sudo dhcpcd iwd neovim zsh \
@@ -176,35 +176,34 @@ genfstab -U -p /mnt >> /mnt/etc/fstab
 
 arch-chroot /mnt
 
-# /etc/mkinitcpio.conf
-# HOOKS=( ... block encrypt lvm2 filesystems ...)
+#NOTE: edit /etc/mkinitcpio.conf
+#HOOKS=( ... block encrypt lvm2 filesystems ...)
 
 grub-install --efi-directory=/boot/efi
 
-# /etc/default/grub
-## UUID:
-## `blkid /dev/nvme0n1p3 | awk '{ print $2 }' | tr -d \"` # / partition UUID
-# GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3 quiet [root=/dev/mapper/arch-root  cryptdevice=UUID=c16a5515-93c3-436a-b790-79a963e2c5d9]:luks_lvm]"
+#NOTE: edit /etc/default/grub
+#UUID: `blkid /dev/nvme0n1p3 | awk '{ print $2 }' | tr -d \"` # / partition UUID
+#GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3 quiet [root=/dev/mapper/arch-root  cryptdevice=UUID=c16a5515-93c3-436a-b790-79a963e2c5d9]:luks_lvm]"
 
-# mkdir /secure
-# dd if=/dev/random of=/secure/root_keyfile.bin bs=512 count=8
-# dd if=/dev/random of=/secure/home_keyfile.bin bs=512 count=8
-# chmod 000 /secure/*
-# chmod 600 /boot/initramfs-linux*
-# cryptsetup luksAddKey /dev/nvme0n1p3 /secure/root_keyfile.bin # /
+mkdir /secure
+dd if=/dev/random of=/secure/root_keyfile.bin bs=512 count=8
+dd if=/dev/random of=/secure/home_keyfile.bin bs=512 count=8
+chmod 000 /secure/*
+chmod 600 /boot/initramfs-linux*
+cryptsetup luksAddKey /dev/nvme0n1p3 /secure/root_keyfile.bin # /
 ## type passphrase
-# cryptsetup luksAddKey /dev/nvme0n1p4 /secure/home_keyfile.bin # /home
+cryptsetup luksAddKey /dev/nvme0n1p4 /secure/home_keyfile.bin # /home
 ## type passphrase
 
-# /etc/mkinitcpio.conf
-# FILES=( /secure/root_keyfile.bin )
+#NOTE: edit /etc/mkinitcpio.conf
+#FILES=( /secure/root_keyfile.bin )
 
-# /etc/crypttab
+#NOTE: edit /etc/crypttab
 ## UUID:
 ## `blkid /dev/nvme0n1p4 | awk '{ print $2 }' | tr -d \"` # /home partition UUID
 # arch-home      UUID=bb3821ab-4290-4f68-8ecb-8d5eea6174c7  /secure/home_keyfile.bin
 
-# mkinitcpio -p linux
+mkinitcpio -p linux
 
 grub-mkconfig -o /boot/grub/grub.cfg
 grub-mkconfig -o /boot/efi/EFI/arch/grub.cfg
@@ -281,7 +280,7 @@ yay -S xorg xorg-xinit xorg-xrdb \
 	ttf-comic-mono-git kitty dialog freerdp iproute2 libnotify gnu-netcat \
 	imagemagick ripgrep unzip rar p7zip flameshot obs-studio kcolorchooser \
 	thunar thunar-volman thunar-archive-plugin thunar-media-tags-plugin thunar-shares-plugin thunar-vcs-plugin \
-	gvfs mousepad xfce4-panel xfce4-power-manager xfce4-pulseaudio-plugin xfce4-wavelan-plugin \
+	udisks2 gvfs gvfs-mtp mousepad xfce4-panel xfce4-power-manager xfce4-pulseaudio-plugin xfce4-wavelan-plugin \
 	xfce4-genmon-plugin xfce4-fsguard-plugin xfce4-netload-plugin xfce4-clipman-plugin xfce4-indicator-plugin xfce4-eyes-plugin \
 	ufw gufw \
 	virtualbox-bin virtualbox-bin-guest-iso virtualbox-ext-oracle &
@@ -292,26 +291,28 @@ systemctl enable bluetooth
 systemctl enable iptables
 systemctl enable cups
 
-# su warpaint
-# cd ~
-# mkdir -p ~/{.config, .local}
+su warpaint
+cd ~
+mkdir -p ~/{.config, .local}
 #
-# git clone https://github.com/warpaint9299/dotfiles.git ~/.dotfiles && \
-# cd ~/.dotfiles
-# stow .
+git clone https://github.com/warpaint9299/dotfiles.git ~/.dotfiles && \
+cd ~/.dotfiles
+git submodule update --init --recursive
+stow .
 #
 ## emoji support for dwmbar
-# cd ~
-# git clone https://github.com/uditkarode/libxft-bgra
-# cd libxft-bgra
-# sh autogen.sh --sysconfdir=/etc --prefix=/usr --mandir=/usr/share/man
-# sudo make install
+cd ~
+git clone https://github.com/uditkarode/libxft-bgra
+cd libxft-bgra
+sh autogen.sh --sysconfdir=/etc --prefix=/usr --mandir=/usr/share/man
+sudo make install
 #
-# cd ~/.dwm
-# sudo make install clean
+cd ~/.dwm
+yay -S imlib2 && \
+sudo make install clean
 #
-# cd ~/.st
-# sudo make install clean
+cd ~/.st
+sudo make install clean
 #
-# exit
-# umount -R /mnt
+exit
+umount -R /mnt
